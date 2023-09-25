@@ -3,7 +3,7 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>Sobre mi</title>
+    <title>Escritorio Virtual - Sobre mi</title>
     <meta name ="author" content ="Joaquín Salustiano Britos Morales" />
     <meta name ="description" content ="Página de informacion del autor de la web." />
     <meta name ="keywords" content ="nombre, identificador, nacimiento, aficiones, musica" />
@@ -12,51 +12,73 @@
 </head>
 
 <body>
-    <!-- Datos con el contenidos que aparece en el navegador -->
-    <section>
     <h1>Sobre mi</h1>
     <nav>
         <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
+        <a href="sobremi.html" accesskey="S" tabindex="6">Sobre mi</a>
         <a href="noticias.html" accesskey="N" tabindex="2">Noticias</a>
-        <a href="viajes.html" accesskey="V" tabindex="3">Viajes</a>
         <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
         <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
-        <a href="sobremi.html" accesskey="S" tabindex="6">Sobre mi</a>
+        <a href="viajes.html" accesskey="V" tabindex="3">Viajes</a>
     </nav>
-    </section>
 
-    <section>
-    <h2>Nombre</h2>
-    <p>Joaqín Salustiano Britos Morales</p>
-    </section>
-
-    <section>
-    <h3>Identificador universitario</h3>
-    <p>UO276044</p>
-    </section>
-
-    <section>
-    <h4>Fecha de nacimiento</h4>
-    <p>Sabado 3 de febrero de 2001</p>
-    </section>
-
-    <section>
-    <h5>¿Qué haces actualmente?</h5>
-    <p>
-        Estudiante en la <a href="https://www.uniovi.es">Universidad de oviedo</a>.
-    </p>
-    </section>
-
-    <section>
-        <h6>Sobre mi</h6>
+    <h2>Datos</h2>
+        <h3>Nombre</h3>
+            <p>Joaqín Salustiano Britos Morales</p>
+        <h3>Identificador universitario</h3>
+            <p>UO276044</p>
+        <h3>Fecha de nacimiento</h3>
+            <p>03/02/2001</p>
+        <h3>Sobre mi</h3>
         <p>
-            Soy Joaquín Salustiano Britos Morales, estudiante en la universidad de oviedo. Mis intereses son el mundo del motor, el montaje de maquetas gunpla y la informatica.
-        </p>
-
-        <h6>Aficiones</h6>
+            <h4>Infancia</h4>
+            <p>
+                Nací el 3 de febrero de 2001 en Montevideo, Uruguay, desde pequeño tuve fijación por
+                la informática. Esta aficion, entre muchas otras es predominante en mi vida por las siguientes razones
+            </p>
+                <h5>Informática</h5>
+                <p>
+                    A la temprana edad de 2 años llego el primer ordenador personal a mi casa, mis padres lo utilizaban para uso diario de trabajo pero yo me entretenia con las simples páginas web en HTML plano o juegos como Diablo 2 y posteriormente World of Warcraft.
+                </p>
+                    <h6>¿Diablo 2 o World of Warcraft?</h6>
+                    <p>
+                        Para emprezar, estos dos juegos marcaron mi infancia y adolescencia haciendome un gran fan de los videojuegos de Blizzard. Entre estos dos juegos mi elección siempre fue World of Warcraft por su casi infinito mundo abierto y sus increible comunidad.
+                    </p>
+                <p>
+                    Los videojuegos fueron una de las principales razones para iniciarme en el mundo de la informatica debido a que fue lo primero que me hizo plantearme como funcionaban los ordenadores.
+                </p>
+            <h4>Actualidad</h4>
+            <p>
+                Estudiante en la <a href="https://www.uniovi.es">Universidad de oviedo</a> y empleado en NttData
+            </p>        
+        
+        <h3>Aficiones</h3>
         <ul>
-            <li><a href="https://www.formula1.com">Formula 1</a></li>
-            <li>Cocina</li>
+            <li>Automovilismo
+                <ul>
+                    <li>
+                        Formula 1
+                        <audio controls>
+                            <source src="multimedia/audios/sonidov10.mp3" type="audio/mpeg"/>
+                        </audio>
+                    </li>
+                    <li>
+                        WRC
+                        <video controls>
+                            <source src="multimedia/videos/wrc.mp4" type="video/mp4"/>
+                        </video>
+                    </li>
+                    <li>ETRC</li>
+                </ul>
+            </li>
+            <li>Cocina
+                <ul>
+                    <li>Ragu</li>
+                    <li>Fabada</li>
+                    <li>Asado</li>
+                    <li>Chuleton</li>
+                </ul>
+            </li>
             <li>
                 Gunpla
                 <picture>
@@ -66,8 +88,7 @@
             <li>Mecánica</li>
             <li>Electrónica</li>
         </ul>
-
-        <h6>Musica</h6>
+        <h3>Musica</h3>
         <ol>
             <li>The offspring</li>
             <li>Eladio Carrion</li>
@@ -75,8 +96,7 @@
             <li>Miyagi</li>
             <li>La Joaqui</li>
         </ol>
-
-        <h6>Asignaturas preferidas</h6>
+        <h3>Asignaturas preferidas</h3>
         <dl>
             <dt>Administración de Sistemas y redes</dt>
             <dd>Enseña acerca de diferentes tecnicas para administracion de sistemas y mantenimiento de redes.</dd>
@@ -88,90 +108,60 @@
             <dd>Trata sobre las diferentes técnicas para el flujo de informacion en una aplicacion</dd>
         </dl>
 
-        <h6>Aficiones (continuacion)</h6>
-        <ul>
-            <li>Automovilismo
-            <ul>
-                <li>
-                    Formula 1
-                    <audio controls>
-                        <source src="multimedia/audios/sonidov10.mp3" type="audio/mpeg"/>
-                    </audio>
-                </li>
-                <li>
-                    WRC
-                    <video controls>
-                        <source src="multimedia/videos/wrc.mp4" type="video/mp4"/>
-                    </video>
-                </li>
-                <li>ETRC</li>
-            </ul>
-            </li>
-            <li>Cocina
-            <ul>
-                <li>Ragu</li>
-                <li>Fabada</li>
-                <li>Asado</li>
-                <li>Chuleton</li>
-            </ul>
-            </li>
-        </ul>
-
-        <h6>Temperaturas medias en Avilés</h6>
-        <table>
-            <thead>
-                <tr>
-                    <th>Año</th>
-                    <th>Temperatura</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2013</td>
-                    <td>18º</td>
-                </tr>
-                <tr>
-                    <td>2014</td>
-                    <td>17º</td>
-                </tr>
-                <tr>
-                    <td>2015</td>
-                    <td>19º</td>
-                </tr>
-                <tr>
-                    <td>2016</td>
-                    <td>16º</td>
-                </tr>
-                <tr>
-                    <td>2017</td>
-                    <td>18º</td>
-                </tr>
-                <tr>
-                    <td>2018</td>
-                    <td>21º</td>
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>20º</td>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>22º</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>18º</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>23º</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>20º</td>
-                </tr>
-            </tbody>
-        </table>    
-    </section>
+    <h2>Temperaturas medias en Avilés</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Temperatura</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2013</td>
+                <td>18º</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>17º</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>19º</td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>16º</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td>18º</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>21º</td>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>20º</td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>22º</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>18º</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>23º</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>20º</td>
+            </tr>
+        </tbody>
+    </table>    
 </body>
 </html>
