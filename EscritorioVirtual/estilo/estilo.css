@@ -1,1 +1,95 @@
 /*Joaquín Salustiano Britos Morales UO276044*/
+
+/*Especificidad: (0, 0, 1)*/
+body {
+    /*Fuente*/
+    font-family: 'Courier';
+    /*Color*/
+    color: black;
+    background-color: #EEEDE7;      
+}
+
+/*Especificidad: (0, 0, 1)*/
+h1, h2, h3, h4 {
+    /*Hereda color 000000 de body*/
+    background-color: #B9B7BD;
+}
+
+/*Especificidad: (0, 0, 1)*/
+h1 {
+    font-size: x-large;
+}
+
+/*Especificidad: (0, 0, 1)*/
+h2 {
+    font-size: large;
+}
+
+/*Especificidad: (0, 0, 1)*/
+h3 {
+    font-size: medium;
+}
+
+/*Especificidad: (0, 0, 1)*/
+h4 {
+    font-size: small;
+}
+
+/*Especificidad: (0, 0, 1)*/
+
+section {
+    /*Hereda color 000000 de body*/
+    background-color: #E7D2CC;
+}
+
+/*Especificidad: (0, 0, 1)*/
+
+p {
+    /*Hereda color 000000 de body*/
+    background-color: #868B8E;
+}
+
+/*Especificidad: (0, 1, 1)*/
+a:hover {
+    color: brown;
+}
+
+/*Especificidad: (0, 0, 1)*/
+ul, ol, table, dl {
+    /*Hereda color 000000 de body*/
+    background-color: coral;
+}
+
+/*Especificidad: (0, 0, 1)*/
+li {
+    /*Hereda color 000000 de body*/
+    background-color: #B9B7BD;
+}
+
+/*Especificidad: (0, 0, 1)*/
+ul li:nth-child(3) {
+    /*Hereda color 000000 de body*/
+    background-color: bisque;
+}
+
+/*Especificidad: (0, 0, 1)*/
+dt {
+    background-color: #E7D2CC;  
+    font-size: medium;
+}
+
+/*Especificidad: (0, 0, 1)*/
+dd {
+    background-color: #B9B7BD;
+    font-size: small;
+}
+
+/*Especificidad: (0, 0, 1)*/
+table {
+    /*Hereda color 000000 de body*/
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+
+

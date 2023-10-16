@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1>Esccritorio Virtual</h1>
+        <h1>Escritorio Virtual</h1>
         <nav>
             <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
             <a href="sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
@@ -28,22 +28,18 @@
     <!--<main>-->
         <section>
             <h2>Sobre mi</h2>
-            <h3>Datos personales</h3>
-            <h4>Nombre</h4>
-            <p>Joaqín Salustiano Britos Morales</p>
-            <h4>Identificador universitario</h4>
-            <p>UO276044</p>
-            <h4>Fecha de nacimiento</h4>
+            <p>Joaquín Salustiano Britos Morales</p>
             <p>03/02/2001</p>
-            <h4>Información sobre mi</h4>
-            <h5>Infancia</h5>
+            <h3>Información sobre mi</h3>
+            <h4>Infancia</h4>
             <p>
-                Nací el 3 de febrero de 2001 en Montevideo, Uruguay, desde pequeño tuve fijación por
-                la informática. Esta aficion, entre muchas otras es predominante en mi vida por las siguientes razones
+                Nací el 3 de febrero de 2001 en Montevideo, Uruguay. Me crié saltando entre la ciudad y el campo ya que mi familia por parte de padre tiene una explotación ganadera. Esto me llevo a amar la naturaleza.
             </p>
-            <h6>Informática</h6>
             <p>
-                A la temprana edad de 2 años llego el primer ordenador personal a mi casa, mis padres lo utilizaban para
+                Siendo niño sentía curiosidad por cada cosa que veia y a parte de fotos que mis familiares mostraban y libros que yo leia por mi cuenta empecé a buscar informacion usando el ordenador en casa de mis abuelos.
+            </p>
+            <p>
+                Cuando tenia 5 años llego el primer ordenador personal a mi casa, mis padres lo utilizaban para
                 uso diario pero yo me entretenia navegando internet, escuchando musica y trasteando con juegos como
                 Diablo 2 y posteriormente World of Warcraft.
             </p>
@@ -56,13 +52,15 @@
             <p>
                 Estudiante en la <a href="https://www.uniovi.es">Universidad de oviedo</a> y empleado en NttData
             </p>
-            <h3>Foto personal</h3>
+
             <picture>
                 <source srcset="multimedia/imagenes/fotosobremi-movil.jpg" media="(max-width: 465px)">
                 <source srcset="multimedia/imagenes/fotosobremi-tablet.jpg" media="(max-width: 799px)">
                 <img src="multimedia/imagenes/fotosobremi-monitor.jpg" alt="imagen sobre mi" />
             </picture>
-            <h3>Aficiones</h3>
+
+            <!-- Las listas anidadas van dentro de <li>? -->
+            <h4>Aficiones</h4>
             <ul>
                 <li>Automovilismo
                     <ul>
@@ -84,32 +82,7 @@
                 <li>Electrónica</li>
             </ul>
 
-            <h3>Sonido de motor V10 de Formula 1 en formato mp3</h3>
-            <audio controls>
-                <source src="multimedia/audios/sonidov10.mp3" type="audio/mpeg" />
-            </audio>
-
-            <h3>Sonido de motor V10 de Formula 1 en formato wav</h3>
-            <audio controls>
-                <source src="multimedia/audios/sonidov10.wav" type="audio/wav" />
-            </audio>
-
-            <h3>Video de tramo WRC en formato mp4</h3>
-            <video controls>
-                <source src="multimedia/videos/wrc.mp4" type="video/mp4" />
-            </video>
-
-            <h3>Video de tramo WRC en formato webm</h3>
-            <video controls>
-                <source src="multimedia/videos/wrc.webm" type="video/webm" />
-            </video>
-
-            <h3>Imagen de gunpla Barbatos</h3>
-            <picture>
-                <img src="multimedia/imagenes/gunpla.jpg" alt="imagen de un gunpla" />
-            </picture>
-
-            <h3>Musica</h3>
+            <h4>Cantantes y grupos preferidos</h4>
             <ol>
                 <li>The offspring</li>
                 <li>Eladio Carrion</li>
@@ -117,69 +90,92 @@
                 <li>Miyagi</li>
                 <li>La Joaqui</li>
             </ol>
-            <h3>Asignaturas preferidas</h3>
+
+            <h4>Asignaturas preferidas</h4>
             <dl>
                 <dt>Administración de Sistemas y redes</dt>
-                <dd>Enseña acerca de diferentes tecnicas para administracion de sistemas y mantenimiento de redes.</dd>
+                <dd>Enseña acerca de diferentes tecnicas para administracion de sistemas y mantenimiento de redes. El motivo por el que esta es una de las asignaturas que mas me gusta es que el profesor de laboratorio el primer dia nos hizo un recorrido por la universidad enseñandonos varios servidores y uno de los racks. De este último saco una de las celdas para explicarnos la importancia acerca de la redundancia de datos.</dd>
                 <dt>Sistemas Distribuidos e Internet</dt>
-                <dd>Enseña los fundamentos de Springboot y diferentes técnicas de diseño web con plantillas como Thymeleaf</dd>
+                <dd>Enseña los fundamentos de Springboot y diferentes técnicas de diseño web con plantillas como Thymeleaf. Gracias a las entregas semanales y como estaba planteada tanto la parte teórica como práctica fue una introducción perfecta a los principales patrones y técnicas para realizar programacion web.</dd>
                 <dt>Sistemas operativos</dt>
-                <dd>Consiste en como funciona y se diseña un sistema operativo.</dd>
+                <dd>Consiste en como funciona y se diseña un sistema operativo. Asignatura impartida durante la pandemia, las clases online eran amenas puesto que el contenido era muy interesante y el profesor lo explicaba de una manera sencilla y que nos atrapaba. Las sesiones de laboratorio constaban del diseño de un pequeño sistema operativo.</dd>
                 <dt>Repositorios de la informacion</dt>
-                <dd>Trata sobre las diferentes técnicas para el flujo de informacion en una aplicacion</dd>
+                <dd>Trata sobre las diferentes técnicas para el flujo de informacion en una aplicación. Una de las primeras asignaturas presenciales despues de la pandemia. Las sesiones de laboratorio estaban divididas en jdbc, jpa, elasticsearch y nosql. Cada una de estas partes constaba de varios ejercicios que a mi parecer eran entretenidos puesto que debias trabajar con diferentes patrones.</dd>
             </dl>
-        </section>
+            
+            <h3>Sonido de motor V10 de Formula 1</h3>
+            <audio controls>
+                <source src="multimedia/audios/sonidov10.mp3" type="audio/mpeg" />
+                <source src="multimedia/audios/sonidov10.wav" type="audio/wav" />
+            </audio>
 
+            <h3>Video de tramo WRC</h3>
+            <video controls>
+                <source src="multimedia/videos/wrc.mp4" type="video/mp4" />
+                <source src="multimedia/videos/wrc.webm" type="video/webm" />
+            </video>
+
+            <h3>Imagen de gunpla Barbatos</h3>
+            <picture>
+                <source srcset="multimedia/imagenes/gunpla-movil.jpg" media="(max-width: 465px)">
+                <source srcset="multimedia/imagenes/gunpla-tablet.jpg" media="(max-width: 799px)">
+                <img src="multimedia/imagenes/gunpla-monitor.jpg" alt="imagen sobre mi" />
+            </picture>
+
+            
+        </section>
+        <!--
+            Hacer tabla accesible
+        -->
         <aside>
             <h2>Temperaturas</h2>
+            <p>
+                Los valores se han extraido de la siguiente <a href="https://www.tutiempo.net"> web meteorológica</a>
+            </p>
             <table>
                 <tr>
                     <th scope="col" id="año">Año</th>
                     <th scope="col" id="temperatura">Temperatura</th>
                 </tr>
                 <tr>
-                    <td headers="año">2013</td>
-                    <td headers="temperatura">18º</td>
+                    <th scope="row" id="2013" headers="año">2013</th>
+                    <td headers="2013 temperatura">12,3º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2014</td>
-                    <td headers="temperatura">17º</td>
+                    <th scope="row" id="2014" headers="año">2014</th>
+                    <td headers="2014 temperatura">13,5º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2015</td>
-                    <td headers="temperatura">19º</td>
+                    <th scope="row" id="2015" headers="año">2015</th>
+                    <td headers="2015 temperatura">13,4º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2016</td>
-                    <td headers="temperatura">16º</td>
+                    <th scope="row" id="2016" headers="año">2016</th>
+                    <td headers="2016 temperatura">13,2º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2017</td>
-                    <td headers="temperatura">18º</td>
+                    <th scope="row" id="2017" headers="año">2017</th>
+                    <td headers="2017 temperatura">13,3º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2018</td>
-                    <td headers="temperatura">21º</td>
+                    <th scope="row" id="2018" headers="año">2018</th>
+                    <td headers="2018 temperatura">13,1º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2019</td>
-                    <td headers="temperatura">20º</td>
+                    <th scope="row" id="2019" headers="año">2019</th>
+                    <td headers="2019 temperatura">13,2º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2020</td>
-                    <td headers="temperatura">22º</td>
+                    <th scope="row" id="2020" headers="año">2020</th>
+                    <td headers="2020 temperatura">13,8º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2021</td>
-                    <td headers="temperatura">18º</td>
+                    <th scope="row" id="2021" headers="año">2021</th>
+                    <td headers="2021 temperatura">13,0º</td>
                 </tr>
                 <tr>
-                    <td headers="año">2022</td>
-                    <td headers="temperatura">23º</td>
-                </tr>
-                <tr>
-                    <td headers="año">2023</td>
-                    <td headers="temperatura">20º</td>
+                    <th scope="row" id="2022" headers="año">2022</th>
+                    <td headers="2022 temperatura">14,0º</td>
                 </tr>
             </table>
         </aside>
