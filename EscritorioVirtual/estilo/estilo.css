@@ -71,8 +71,9 @@ li {
 }
 
 /*Especificidad: (0, 1, 2)*/
-ul li:nth-child(5) {
-    background-color: aqua;
+ul li:nth-child(3) {
+    font-size: larger;
+    background-color: chocolate;
 }
 
 /*Especificidad: (0, 0, 1)*/
@@ -94,6 +95,11 @@ table {
     /*Hereda color 000000 de body*/
     border-collapse: collapse;
     border: 3px solid black;
+}
+
+img, video {
+    width: 100%;
+    height: auto;
 }
 
 
