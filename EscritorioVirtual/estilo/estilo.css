@@ -2,9 +2,7 @@
 
 /*Especificidad: (0, 0, 1)*/
 body {
-    /*Fuente*/
-    font-family: 'Courier';
-    /*Color*/
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     color: black;
     background-color: #EEEDE7;      
 }
@@ -43,14 +41,20 @@ section {
 }
 
 /*Especificidad: (0, 0, 1)*/
-
 p {
     /*Hereda color 000000 de body*/
     background-color: #868B8E;
 }
 
+/*Especificidad: (0, 0, 1)*/
+a {
+    color: darkblue;
+    background-color: #B9B7BD;
+}
+
 /*Especificidad: (0, 1, 1)*/
 a:hover {
+    /*Hereda color B9B7BD de a*/
     color: brown;
 }
 
@@ -66,20 +70,21 @@ li {
     background-color: #B9B7BD;
 }
 
-/*Especificidad: (0, 0, 1)*/
-ul li:nth-child(3) {
-    /*Hereda color 000000 de body*/
-    background-color: bisque;
+/*Especificidad: (0, 1, 2)*/
+ul li:nth-child(5) {
+    background-color: aqua;
 }
 
 /*Especificidad: (0, 0, 1)*/
 dt {
+    /*Hereda color 000000 de body*/
     background-color: #E7D2CC;  
     font-size: medium;
 }
 
 /*Especificidad: (0, 0, 1)*/
 dd {
+    /*Hereda color 000000 de body*/
     background-color: #B9B7BD;
     font-size: small;
 }
