@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas>
+    <ruta>
+        <nombre-ruta>E4 253ª CABAÑA FOREST PARADISE-CHIPROVTSI</nombre-ruta>
+        <tipo-ruta>Senderismo</tipo-ruta>
+        <medio-transporte>A pie</medio-transporte>
+        <fecha-inicio>23/10/2023</fecha-inicio>
+        <hora-inicio>10:00:00</hora-inicio>
+        <duracion>10h55m</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>Ruta en serbia</descripcion>
+        <personas-adecuadas>Jovenes</personas-adecuadas>
+        <lugar-inicio>CABAÑA FOREST PARADISE</lugar-inicio>
+        <direccion-inicio>En medio del bosque</direccion-inicio>
+        <coordenadas-inicio longitud="17.396343" latitud="44.772011" altitud="650" />
+        <referencias>
+            <referencia
+                path="https://es.wikiloc.com/rutas-senderismo/e4-253a-cabana-forest-paradise-chiprovtsi-42715617#wp-42715619" />
+            <referencia path="https://es.wikipedia.org/wiki/Crni_Vrh" />
+            <referencia path="https://es.wikipedia.org/wiki/Midžor" />
+        </referencias>
+        <recomendacion nota="10" />
+        <hitos>
+            <hito>
+                <nombre-hito>Bezimeni vrh</nombre-hito>
+                <descripcion-hito>Llegamos a Bezimeni vrh</descripcion-hito>
+                <coordenadas-hito longitud="19.031065" latitud="43.131101" altitud="2487" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="cresta.png" />
+                </fotos>
+            </hito>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2169" />
+                <distancia-hito-anterior kilometros="6.65" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+            <hito>
+                <nombre-hito>Hotel Kiprovets</nombre-hito>
+                <descripcion-hito>Llegamos a Kiprovets</descripcion-hito>
+                <coordenadas-hito longitud="22.880239" latitud="43.383989" altitud="1207" />
+                <distancia-hito-anterior kilometros="3.27" />
+                <fotos>
+                    <foto path="kiprovets.png" />
+                </fotos>
+            </hito>
+        </hitos>
+    </ruta>
+    <ruta>
+        <nombre-ruta>E4 253ª CABAÑA FOREST PARADISE-CHIPROVTSI</nombre-ruta>
+        <tipo-ruta>Senderismo</tipo-ruta>
+        <medio-transporte>A pie</medio-transporte>
+        <fecha-inicio>23/10/2023</fecha-inicio>
+        <hora-inicio>10:00:00</hora-inicio>
+        <duracion>10h55m</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>Ruta en serbia</descripcion>
+        <personas-adecuadas>Jovenes</personas-adecuadas>
+        <lugar-inicio>CABAÑA FOREST PARADISE</lugar-inicio>
+        <direccion-inicio>En medio del bosque</direccion-inicio>
+        <coordenadas-inicio longitud="17.396343" latitud="44.772011" altitud="650" />
+        <referencias>
+            <referencia
+                path="https://es.wikiloc.com/rutas-senderismo/e4-253a-cabana-forest-paradise-chiprovtsi-42715617#wp-42715619" />
+            <referencia path="https://es.wikipedia.org/wiki/Crni_Vrh" />
+            <referencia path="https://es.wikipedia.org/wiki/Midžor" />
+        </referencias>
+        <recomendacion nota="10" />
+        <hitos>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+        </hitos>
+    </ruta>
+    <ruta>
+        <nombre-ruta>E4 253ª CABAÑA FOREST PARADISE-CHIPROVTSI</nombre-ruta>
+        <tipo-ruta>Senderismo</tipo-ruta>
+        <medio-transporte>A pie</medio-transporte>
+        <fecha-inicio>23/10/2023</fecha-inicio>
+        <hora-inicio>10:00:00</hora-inicio>
+        <duracion>10h55m</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>Ruta en serbia</descripcion>
+        <personas-adecuadas>Jovenes</personas-adecuadas>
+        <lugar-inicio>CABAÑA FOREST PARADISE</lugar-inicio>
+        <direccion-inicio>En medio del bosque</direccion-inicio>
+        <coordenadas-inicio longitud="17.396343" latitud="44.772011" altitud="650" />
+        <referencias>
+            <referencia
+                path="https://es.wikiloc.com/rutas-senderismo/e4-253a-cabana-forest-paradise-chiprovtsi-42715617#wp-42715619" />
+            <referencia path="https://es.wikipedia.org/wiki/Crni_Vrh" />
+            <referencia path="https://es.wikipedia.org/wiki/Midžor" />
+        </referencias>
+        <recomendacion nota="10" />
+        <hitos>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+            <hito>
+                <nombre-hito>Midzhur</nombre-hito>
+                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
+                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <distancia-hito-anterior kilometros="0" />
+                <fotos>
+                    <foto path="midzhur.png" />
+                </fotos>
+            </hito>
+        </hitos>
+    </ruta>
+</rutas>

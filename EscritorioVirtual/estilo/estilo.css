@@ -9,8 +9,8 @@ body {
 
 /*Especificidad: (0, 0, 1)*/
 h1, h2, h3, h4 {
-    /*Hereda color 000000 de body*/
-    background-color: #B9B7BD;
+    background-color: black;
+    color: white;
 }
 
 /*Especificidad: (0, 0, 1)*/
@@ -36,13 +36,13 @@ h4 {
 /*Especificidad: (0, 0, 1)*/
 
 section {
-    /*Hereda color 000000 de body*/
-    background-color: #E7D2CC;
+    /*Hereda color #000000 de body*/
+    background-color: white;
 }
 
 /*Especificidad: (0, 0, 1)*/
 p {
-    /*Hereda color 000000 de body*/
+    /*Hereda color 3000000 de body*/
     background-color: #868B8E;
 }
 
@@ -54,39 +54,40 @@ a {
 
 /*Especificidad: (0, 1, 1)*/
 a:hover {
-    /*Hereda color B9B7BD de a*/
-    color: brown;
+    /*Hereda background color #B9B7BD de a*/
+    color: aquamarine;
 }
 
 /*Especificidad: (0, 0, 1)*/
 ul, ol, table, dl {
-    /*Hereda color 000000 de body*/
+    /*Hereda color #000000 de body*/
     background-color: coral;
 }
 
 /*Especificidad: (0, 0, 1)*/
 li {
-    /*Hereda color 000000 de body*/
-    background-color: #B9B7BD;
+    /*Hereda color #000000 de body*/
+    background-color: #868B8E;
 }
 
 /*Especificidad: (0, 1, 2)*/
 ul li:nth-child(3) {
     font-size: larger;
-    background-color: chocolate;
+    /*Hereda color #000000 de body*/
+    background-color: white;
 }
 
 /*Especificidad: (0, 0, 1)*/
 dt {
-    /*Hereda color 000000 de body*/
-    background-color: #E7D2CC;  
+    /*Hereda color #000000 de body*/
+    background-color: #868B8E;  
     font-size: medium;
 }
 
 /*Especificidad: (0, 0, 1)*/
 dd {
-    /*Hereda color 000000 de body*/
-    background-color: #B9B7BD;
+    /*Hereda color #000000 de body*/
+    background-color: #868B8E;
     font-size: small;
 }
 
@@ -97,6 +98,7 @@ table {
     border: 3px solid black;
 }
 
+/*Especificidad: (0, 0, 1)*/
 img, video {
     width: 50%;
     height: auto;

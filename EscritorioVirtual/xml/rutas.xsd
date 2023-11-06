@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="rutas" elementFormDefault="qualified" xmlns="http://www.uniovi.es"
+    targetNamespace="http://www.uniovi.es"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="rutas">
+        <xs:complexType>
+            <xs:choice minOccurs="3" maxOccurs="unbounded">
+                <xs:element name="ruta" minOccurs="3" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre-ruta" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="tipo-ruta" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="medio-transporte" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="fecha-inicio" type="xs:date" minOccurs="0"
+                                maxOccurs="1" />
+                            <xs:element name="hora-inicio" type="xs:time" minOccurs="0"
+                                maxOccurs="1" />
+                            <xs:element name="duracion" type="xs:duration" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="agencia" type="xs:string" minOccurs="1" maxOccurs="1" />
+                            <xs:element name="descripcion" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="personas-adecuadas" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="lugar-inicio" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="direccion-inicio" type="xs:string" minOccurs="1"
+                                maxOccurs="1" />
+                            <xs:element name="coordenadas-inicio" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:attribute name="longitud" type="xs:decimal" />
+                                    <xs:attribute name="latitud" type="xs:decimal" />
+                                    <xs:attribute name="altitud" type="xs:decimal" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="referencias" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="referencia" minOccurs="3"
+                                            maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="path" type="xs:string" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="recomendacion" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:attribute name="nota" type="xs:integer" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="hitos" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="hito" minOccurs="3" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre-hito" type="xs:string"
+                                                        minOccurs="1" maxOccurs="1" />
+                                                    <xs:element name="descripcion-hito"
+                                                        type="xs:string" minOccurs="1" maxOccurs="1" />
+                                                    <xs:element name="coordenadas-hito"
+                                                        minOccurs="1" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="longitud"
+                                                                type="xs:decimal" />
+                                                            <xs:attribute name="latitud"
+                                                                type="xs:decimal" />
+                                                            <xs:attribute name="altitud"
+                                                                type="xs:decimal" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="distancia-hito-anterior"
+                                                        minOccurs="1" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="kilometros"
+                                                                type="xs:decimal" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="fotos" minOccurs="1"
+                                                        maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="foto"
+                                                                    minOccurs="0" maxOccurs="5">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="path"
+                                                                            type="xs:string" />
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
