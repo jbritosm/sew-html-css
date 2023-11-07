@@ -1,0 +1,27 @@
+    
+        <kml>
+            <Document>
+            
+<Placemark>
+    <Style>
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>2</width>         
+      </LineStyle>
+    </Style>
+        <LineString>
+            <coordinates>
+                19.7137,43.7404,396
+
+19.6559,43.7014,1496
+
+19.5815,43.7282,1096
+
+20.3488,43.8705,300
+
+
+            </coordinates>
+            </LineString>
+            </Placemark>
+        </Document>
+    </kml>

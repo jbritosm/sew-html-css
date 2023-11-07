@@ -2,151 +2,151 @@
 <!DOCTYPE rutas SYSTEM "rutas.dtd">
 <rutas>
     <ruta>
-        <nombre-ruta>E4 253ª CABAÑA FOREST PARADISE-CHIPROVTSI</nombre-ruta>
+        <nombre-ruta>Ruta de la Montaña de Zlatibor</nombre-ruta>
         <tipo-ruta>Senderismo</tipo-ruta>
         <medio-transporte>A pie</medio-transporte>
-        <fecha-inicio>23/10/2023</fecha-inicio>
+        <fecha-inicio>2023-10-23</fecha-inicio>
         <hora-inicio>10:00:00</hora-inicio>
-        <duracion>10h55m</duracion>
+        <duracion>P2D</duracion>
         <agencia>Sin agencia</agencia>
-        <descripcion>Ruta en serbia</descripcion>
+        <descripcion>Esta ruta de senderismo te llevará a través de las pintorescas montañas de Zlatibor en Serbia, donde podrás disfrutar de impresionantes paisajes, hermosos bosques y la rica cultura local.</descripcion>
         <personas-adecuadas>Jovenes</personas-adecuadas>
-        <lugar-inicio>CABAÑA FOREST PARADISE</lugar-inicio>
-        <direccion-inicio>En medio del bosque</direccion-inicio>
-        <coordenadas-inicio longitud="17.396343" latitud="44.772011" altitud="650" />
+        <lugar-inicio>Zlatibor, Serbia</lugar-inicio>
+        <direccion-inicio>Plaza Central de Zlatibor, Zlatibor, Serbia</direccion-inicio>
+        <coordenadas-inicio longitud="19.7137" latitud="43.7404" altitud="396" />
         <referencias>
             <referencia
-                path="https://es.wikiloc.com/rutas-senderismo/e4-253a-cabana-forest-paradise-chiprovtsi-42715617#wp-42715619" />
-            <referencia path="https://es.wikipedia.org/wiki/Crni_Vrh" />
-            <referencia path="https://es.wikipedia.org/wiki/Midžor" />
+                path="https://mapcarta.com/es/18723594" />
+            <referencia path="https://es.wikipedia.org/wiki/Zlatibor" />
+            <referencia path="https://mapcarta.com/es/18951504" />
         </referencias>
         <recomendacion nota="10" />
         <hitos>
             <hito>
-                <nombre-hito>Bezimeni vrh</nombre-hito>
-                <descripcion-hito>Llegamos a Bezimeni vrh</descripcion-hito>
-                <coordenadas-hito longitud="19.031065" latitud="43.131101" altitud="2487" />
+                <nombre-hito>Pico Tornik</nombre-hito>
+                <descripcion-hito>En el primer día de la ruta, llegarás al Pico Tornik, el punto más alto de Zlatibor. Desde aquí, podrás disfrutar de vistas panorámicas de las montañas, bosques y campos que rodean la región.</descripcion-hito>
+                <coordenadas-hito longitud="19.6559" latitud="43.7014" altitud="1496" />
                 <distancia-hito-anterior kilometros="0" />
                 <fotos>
-                    <foto path="cresta.png" />
+                    <foto path="tornik.png" />
                 </fotos>
             </hito>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2169" />
-                <distancia-hito-anterior kilometros="6.65" />
+                <nombre-hito>Lago Ribničko</nombre-hito>
+                <descripcion-hito>En el segundo día, llegarás al hermoso Lago Ribničko, un lugar perfecto para descansar y disfrutar de un picnic. El lago está rodeado de bosques y es un refugio para la vida silvestre local.</descripcion-hito>
+                <coordenadas-hito longitud="19.5815" latitud="43.7282" altitud="1096" />
+                <distancia-hito-anterior kilometros="6.69" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="ribnicko.png" />
                 </fotos>
             </hito>
             <hito>
-                <nombre-hito>Hotel Kiprovets</nombre-hito>
-                <descripcion-hito>Llegamos a Kiprovets</descripcion-hito>
-                <coordenadas-hito longitud="22.880239" latitud="43.383989" altitud="1207" />
-                <distancia-hito-anterior kilometros="3.27" />
+                <nombre-hito>Monasterio de Sopocani</nombre-hito>
+                <descripcion-hito>Al final de la ruta, visitarás el Monasterio de Sopocani, un sitio del Patrimonio Mundial de la UNESCO. Este monasterio medieval serbio es famoso por sus frescos bien conservados y su importancia histórica.</descripcion-hito>
+                <coordenadas-hito longitud="20.3488" latitud="43.8705" altitud="300" />
+                <distancia-hito-anterior kilometros="63.64" />
                 <fotos>
-                    <foto path="kiprovets.png" />
+                    <foto path="sopocani.png" />
                 </fotos>
             </hito>
         </hitos>
     </ruta>
     <ruta>
-        <nombre-ruta>E4 253ª CABAÑA FOREST PARADISE-CHIPROVTSI</nombre-ruta>
+        <nombre-ruta>Ruta de los Bosques de Fruska Gora</nombre-ruta>
         <tipo-ruta>Senderismo</tipo-ruta>
         <medio-transporte>A pie</medio-transporte>
-        <fecha-inicio>23/10/2023</fecha-inicio>
-        <hora-inicio>10:00:00</hora-inicio>
-        <duracion>10h55m</duracion>
+        <fecha-inicio>2023-12-23</fecha-inicio>
+        <hora-inicio>12:00:00</hora-inicio>
+        <duracion>P2D</duracion>
         <agencia>Sin agencia</agencia>
-        <descripcion>Ruta en serbia</descripcion>
+        <descripcion>Esta ruta te llevará a través de los exuberantes bosques de la región de Fruska Gora en Serbia, donde podrás disfrutar de la belleza natural, la historia y la tranquilidad de la zona.</descripcion>
         <personas-adecuadas>Jovenes</personas-adecuadas>
-        <lugar-inicio>CABAÑA FOREST PARADISE</lugar-inicio>
-        <direccion-inicio>En medio del bosque</direccion-inicio>
-        <coordenadas-inicio longitud="17.396343" latitud="44.772011" altitud="650" />
+        <lugar-inicio>Novi Sad, Serbia</lugar-inicio>
+        <direccion-inicio>Plaza de la Libertad, Novi Sad, Serbia</direccion-inicio>
+        <coordenadas-inicio longitud="19.8335" latitud="45.2671" altitud="80" />
         <referencias>
             <referencia
-                path="https://es.wikiloc.com/rutas-senderismo/e4-253a-cabana-forest-paradise-chiprovtsi-42715617#wp-42715619" />
-            <referencia path="https://es.wikipedia.org/wiki/Crni_Vrh" />
-            <referencia path="https://es.wikipedia.org/wiki/Midžor" />
+                path="https://es.wikipedia.org/wiki/Novi_Sad" />
+            <referencia path="https://hmn.wiki/es/Kru%C5%A1edol_monastery" />
+            <referencia path="https://en.wikipedia.org/wiki/Stra%C5%BEilovo" />
         </referencias>
-        <recomendacion nota="10" />
+        <recomendacion nota="8" />
         <hitos>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <nombre-hito>Monasterio de Krušedol</nombre-hito>
+                <descripcion-hito>En el primer día de la ruta, visitarás el Monasterio de Krušedol, un monasterio ortodoxo serbio que data del siglo XVI. Explora su arquitectura impresionante y sus jardines serenos.</descripcion-hito>
+                <coordenadas-hito longitud="19.7923" latitud="45.1175" altitud="539 " />
                 <distancia-hito-anterior kilometros="0" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="tara.png" />
                 </fotos>
             </hito>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
-                <distancia-hito-anterior kilometros="0" />
+                <nombre-hito>Lago de Borkovac</nombre-hito>
+                <descripcion-hito>En el segundo día de la ruta, llegarás al Lago de Borkovac, un hermoso lago rodeado de bosques. Aquí, puedes descansar, nadar o incluso alquilar una canoa para disfrutar del agua.</descripcion-hito>
+                <coordenadas-hito longitud="19.6887" latitud="45.1211" altitud="243" />
+                <distancia-hito-anterior kilometros="8.15" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="cascada.png" />
                 </fotos>
             </hito>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
-                <distancia-hito-anterior kilometros="0" />
+                <nombre-hito>Cueva Stražilovo</nombre-hito>
+                <descripcion-hito>Al final de la ruta, visitarás la Cueva Stražilovo, una cueva natural ubicada en la ladera de una colina. Explora la cueva y disfruta de las vistas panorámicas desde la colina.</descripcion-hito>
+                <coordenadas-hito longitud="19.8762" latitud="45.2531" altitud="228" />
+                <distancia-hito-anterior kilometros="20.79" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="monasterio.png" />
                 </fotos>
             </hito>
         </hitos>
     </ruta>
     <ruta>
-        <nombre-ruta>E4 253ª CABAÑA FOREST PARADISE-CHIPROVTSI</nombre-ruta>
+        <nombre-ruta>Ruta de las Montañas de Serbia</nombre-ruta>
         <tipo-ruta>Senderismo</tipo-ruta>
         <medio-transporte>A pie</medio-transporte>
-        <fecha-inicio>23/10/2023</fecha-inicio>
-        <hora-inicio>10:00:00</hora-inicio>
-        <duracion>10h55m</duracion>
+        <fecha-inicio>2023-11-23</fecha-inicio>
+        <hora-inicio>12:00:00</hora-inicio>
+        <duracion>P3D</duracion>
         <agencia>Sin agencia</agencia>
-        <descripcion>Ruta en serbia</descripcion>
+        <descripcion> Esta ruta de senderismo te llevará a través de algunas de las montañas más impresionantes de Serbia, brindándote la oportunidad de disfrutar de hermosos paisajes, flora y fauna única, y la hospitalidad de las aldeas locales.</descripcion>
         <personas-adecuadas>Jovenes</personas-adecuadas>
-        <lugar-inicio>CABAÑA FOREST PARADISE</lugar-inicio>
-        <direccion-inicio>En medio del bosque</direccion-inicio>
-        <coordenadas-inicio longitud="17.396343" latitud="44.772011" altitud="650" />
+        <lugar-inicio>Belgrado, Serbia</lugar-inicio>
+        <direccion-inicio>Plaza de la República, Belgrado, Serbia</direccion-inicio>
+        <coordenadas-inicio longitud="20.4614" latitud="44.8160" altitud="117" />
         <referencias>
             <referencia
-                path="https://es.wikiloc.com/rutas-senderismo/e4-253a-cabana-forest-paradise-chiprovtsi-42715617#wp-42715619" />
-            <referencia path="https://es.wikipedia.org/wiki/Crni_Vrh" />
-            <referencia path="https://es.wikipedia.org/wiki/Midžor" />
+                path="https://es.wikipedia.org/wiki/Belgrado" />
+            <referencia path="https://mapcarta.com/es/14016476" />
+            <referencia path="https://es.wikipedia.org/wiki/Tara_(monta%C3%B1a)" />
         </referencias>
-        <recomendacion nota="10" />
+        <recomendacion nota="9" />
         <hitos>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
+                <nombre-hito>Pico de Tara</nombre-hito>
+                <descripcion-hito>El punto culminante de la ruta, el pico de Tara, ofrece vistas panorámicas impresionantes de las montañas circundantes y el cañón del río Drina. Es el lugar perfecto para tomar fotografías y disfrutar de un almuerzo con vistas.</descripcion-hito>
+                <coordenadas-hito longitud="19.5077" latitud="43.7243" altitud="1544" />
                 <distancia-hito-anterior kilometros="0" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="tara.png" />
                 </fotos>
             </hito>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
-                <distancia-hito-anterior kilometros="0" />
+                <nombre-hito>Cascada de Studenica</nombre-hito>
+                <descripcion-hito>En el segundo día de la ruta, llegarás a la hermosa Cascada de Studenica, donde podrás refrescarte y relajarte en medio de la naturaleza. Esta cascada es un oasis de paz en medio de las montañas.</descripcion-hito>
+                <coordenadas-hito longitud="20.2856" latitud="43.7998" altitud="1820" />
+                <distancia-hito-anterior kilometros="63.09" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="cascada-studenica.png" />
                 </fotos>
             </hito>
             <hito>
-                <nombre-hito>Midzhur</nombre-hito>
-                <descripcion-hito>Llegamos a Midzhur</descripcion-hito>
-                <coordenadas-hito longitud="22.681944" latitud="43.393889" altitud="2.169" />
-                <distancia-hito-anterior kilometros="0" />
+                <nombre-hito>Monasterio de Studenica</nombre-hito>
+                <descripcion-hito> En el último día de la ruta, visitarás el famoso Monasterio de Studenica, un sitio del Patrimonio Mundial de la UNESCO. Este monasterio ortodoxo serbio es un ejemplo impresionante de la arquitectura medieval y alberga valiosos tesoros religiosos.</descripcion-hito>
+                <coordenadas-hito longitud="20.3326" latitud="43.4344" altitud="500" />
+                <distancia-hito-anterior kilometros="40.85" />
                 <fotos>
-                    <foto path="midzhur.png" />
+                    <foto path="monasterio-studenica.png" />
                 </fotos>
             </hito>
         </hitos>

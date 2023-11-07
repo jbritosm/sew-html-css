@@ -4,7 +4,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="rutas">
         <xs:complexType>
-            <xs:choice minOccurs="3" maxOccurs="unbounded">
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
                 <xs:element name="ruta" minOccurs="3" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
