@@ -1,0 +1,13 @@
+body {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    color: white;
+    background-color: black;      
+}
+
+h1, h2, nav {
+    background-color: red;
+}
+
+a {
+    background-color: white;
+}
