@@ -1,0 +1,18 @@
+/* Especificidad (0, 0, 1) */
+main {    
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0;
+    border: 2px solid black;
+}
+  
+/* Especificidad (0, 0, 1) */
+p {
+    background-color: white;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    border: 1px solid black;
+}
