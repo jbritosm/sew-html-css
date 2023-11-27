@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="icon" href="multimedia/imagenes/favicon.png"/>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,6 +28,20 @@
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
         </header>
-    <p>En desarrollo</p>
+        <p>
+            <input type="file" id="archivoTexto" onchange="noticias.leerArchivoTexto(this.files);">
+        </p>
+        <form action="/action_page.php">
+            <label for="titulo">TITULO:</label>
+            <input type="text" id="titulo" name="titulo" value="TITULO">
+            <label for="subtitulo">SUBTITULO:</label>
+            <input type="text" id="subtitulo" name="subtitulo" value="SUBTITULO">
+            <label for="texto">TEXTO:</label>
+            <input type="text" id="texto" name="texto" value="TEXTO">
+            <label for="autor">AUTOR:</label>
+            <input type="text" id="autor" name="autor" value="AUTOR">
+            <input type="submit" value="Añadir">
+        </form>
+        <script src="js/noticias.js"></script>
 </body>
 </html>

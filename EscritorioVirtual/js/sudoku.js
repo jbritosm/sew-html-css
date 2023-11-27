@@ -51,7 +51,9 @@ class Sudoku {
                         se clique con el puntero del raton la funcion 
                         anonima se ejecutara cambiando el "state" de dicho
                         elemento a "clicked"
-                    */
+
+                        Solo puede haber un estado de "clicked"
+                    */                   
                     paragraphs[pCounter].onclick = function() {
                         this.dataset.state = "clicked"
                     }.bind(paragraphs[pCounter], this)

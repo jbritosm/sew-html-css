@@ -93,7 +93,6 @@ class Memoria {
     }
 
     checkForMatch() {
-        console.log(`carta1: ${this.firstCard.dataset.element} carta2: ${this.secondCard.dataset.element}`)
         let match = this.firstCard.dataset.element == this.secondCard.dataset.element
         match ? this.disableCards() : this.unflipCards()
     }
@@ -131,7 +130,7 @@ class Memoria {
 
     createElements() { 
         let array = Object.keys(this.elements)       
-        let section = document.querySelector("body > section:last-of-type")
+        let section = document.getElementsByTagName("section")[1]
         let content = ""
         for (let key in array) {            
             content += `<article data-element=\"${this.elements[array[key]]["element"]}\">\n`
