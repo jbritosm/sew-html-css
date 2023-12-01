@@ -28,7 +28,7 @@
                 <coordenadas-hito longitud="19.6559" latitud="43.7014" altitud="1496" />
                 <distancia-hito-anterior kilometros="0" />
                 <fotos>
-                    <foto path="tornik.png" />
+                    <foto path="multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/tornik.png" />
                 </fotos>
             </hito>
             <hito>
@@ -37,7 +37,7 @@
                 <coordenadas-hito longitud="19.5815" latitud="43.7282" altitud="1096" />
                 <distancia-hito-anterior kilometros="6.69" />
                 <fotos>
-                    <foto path="ribnicko.png" />
+                    <foto path="multimedia/imagenes/../multimedia/imagenes/../multimedia/imagenes/ribnicko.png" />
                 </fotos>
             </hito>
             <hito>
@@ -46,7 +46,7 @@
                 <coordenadas-hito longitud="20.3488" latitud="43.8705" altitud="300" />
                 <distancia-hito-anterior kilometros="63.64" />
                 <fotos>
-                    <foto path="sopocani.png" />
+                    <foto path="multimedia/imagenes/../multimedia/imagenes/sopocani.png" />
                 </fotos>
             </hito>
         </hitos>
@@ -78,7 +78,7 @@
                 <coordenadas-hito longitud="19.7923" latitud="45.1175" altitud="539 " />
                 <distancia-hito-anterior kilometros="0" />
                 <fotos>
-                    <foto path="tara.png" />
+                    <foto path="multimedia/imagenes/../multimedia/imagenes/tara.png" />
                 </fotos>
             </hito>
             <hito>
@@ -87,7 +87,7 @@
                 <coordenadas-hito longitud="19.6887" latitud="45.1211" altitud="243" />
                 <distancia-hito-anterior kilometros="8.15" />
                 <fotos>
-                    <foto path="cascada.png" />
+                    <foto path="multimedia/imagenes/cascada.png" />
                 </fotos>
             </hito>
             <hito>
@@ -96,7 +96,7 @@
                 <coordenadas-hito longitud="19.8762" latitud="45.2531" altitud="228" />
                 <distancia-hito-anterior kilometros="20.79" />
                 <fotos>
-                    <foto path="monasterio.png" />
+                    <foto path="multimedia/imagenes/monasterio.png" />
                 </fotos>
             </hito>
         </hitos>
@@ -128,7 +128,7 @@
                 <coordenadas-hito longitud="19.5077" latitud="43.7243" altitud="1544" />
                 <distancia-hito-anterior kilometros="0" />
                 <fotos>
-                    <foto path="tara.png" />
+                    <foto path="multimedia/imagenes/tara.png" />
                 </fotos>
             </hito>
             <hito>
@@ -137,7 +137,7 @@
                 <coordenadas-hito longitud="20.2856" latitud="43.7998" altitud="1820" />
                 <distancia-hito-anterior kilometros="63.09" />
                 <fotos>
-                    <foto path="cascada-studenica.png" />
+                    <foto path="multimedia/imagenes/cascada-studenica.png" />
                 </fotos>
             </hito>
             <hito>
@@ -146,7 +146,7 @@
                 <coordenadas-hito longitud="20.3326" latitud="43.4344" altitud="500" />
                 <distancia-hito-anterior kilometros="40.85" />
                 <fotos>
-                    <foto path="monasterio-studenica.png" />
+                    <foto path="multimedia/imagenes/monasterio-studenica.png" />
                 </fotos>
             </hito>
         </hitos>

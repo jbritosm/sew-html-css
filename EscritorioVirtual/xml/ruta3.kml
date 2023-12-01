@@ -1,26 +1,14 @@
-    
-        <kml>
-            <Document>
-            
+<kml>
+<Document>
 <Placemark>
-    <Style>
-      <LineStyle>
-        <color>ff0000ff</color>
-        <width>2</width>         
-      </LineStyle>
-    </Style>
-        <LineString>
-            <coordinates>
-                20.4614,44.8160,117
-
-19.5077,43.7243,1544
-
-20.2856,43.7998,1820
-
-20.3326,43.4344,500
-
-
-            </coordinates>
+<name>Ruta de las Montañas de Serbia</name><Style>
+<LineStyle>
+<color>ff0000ff</color>
+<width>2</width>
+</LineStyle>
+</Style>
+<LineString>
+<coordinates>20.4614,44.8160,117	19.5077,43.7243,1544	20.2856,43.7998,1820	20.3326,43.4344,500</coordinates>
             </LineString>
             </Placemark>
         </Document>

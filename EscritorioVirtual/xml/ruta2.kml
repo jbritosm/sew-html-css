@@ -1,26 +1,14 @@
-    
-        <kml>
-            <Document>
-            
+<kml>
+<Document>
 <Placemark>
-    <Style>
-      <LineStyle>
-        <color>ff0000ff</color>
-        <width>2</width>         
-      </LineStyle>
-    </Style>
-        <LineString>
-            <coordinates>
-                19.8335,45.2671,80
-
-19.7923,45.1175,539 
-
-19.6887,45.1211,243
-
-19.8762,45.2531,228
-
-
-            </coordinates>
+<name>Ruta de los Bosques de Fruska Gora</name><Style>
+<LineStyle>
+<color>ff0000ff</color>
+<width>2</width>
+</LineStyle>
+</Style>
+<LineString>
+<coordinates>19.8335,45.2671,80	19.7923,45.1175,539 	19.6887,45.1211,243	19.8762,45.2531,228</coordinates>
             </LineString>
             </Placemark>
         </Document>

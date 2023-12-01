@@ -7,8 +7,8 @@ body {
     background-color: #EEEDE7;      
 }
 
-/*Especificidad: (0, 0, 1)*/
-h1, h2, h3, h4 {
+/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
+h1, h2, h3, h4, h5 {
     background-color: black;
     color: white;
 }
@@ -33,17 +33,10 @@ h4 {
     font-size: small;
 }
 
-/*Especificidad: (0, 0, 1)*/
-
-section {
+/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
+section, form, p {
     /*Hereda color #000000 de body*/
-    background-color: white;
-}
-
-/*Especificidad: (0, 0, 1)*/
-p {
-    /*Hereda color 3000000 de body*/
-    background-color: #868B8E;
+    background-color: #D6C4C0;
 }
 
 /*Especificidad: (0, 0, 1)*/
@@ -58,7 +51,7 @@ a:hover {
     color: aquamarine;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
 ul, ol, table, dl {
     /*Hereda color #000000 de body*/
     background-color: coral;
@@ -98,7 +91,7 @@ table {
     border: 3px solid black;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/*Especificidad: (0, 0, 1), (0, 0, 1)*/
 img, video {
     width: 50%;
     height: auto;

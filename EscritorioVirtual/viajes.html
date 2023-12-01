@@ -9,9 +9,13 @@
     <meta name ="keywords" content ="desarrollo" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet " type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/viajes.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
     <link rel="icon" href="multimedia/imagenes/favicon.png"/>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="js/viajes.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +31,37 @@
             <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
-        </header>
-    <p>En desarrollo</p>
+    </header>
+    <section>
+        <h2>Mapa estatico</h2>
+        <button onclick="viajes.getMapaEstaticoMapbox()">Mostrar mapa estatico</button>
+    </section>
+    <section>
+        <h2>Mapa dinamico</h2>
+        <button onclick="viajes.getMapaDinamicoMapbox('map')">Mostrar mapa dinamico</button>
+        <section id="map"></section>
+    </section>
+    <section>
+        <h2>Rutas</h2>
+        <label for="archivoTexto">Fichero de rutas:</label>
+        <input type="file" id="archivoTexto" onchange="viajes.cargarRutaXML(this.files);">
+    </section>
+    <section>
+        <h2>Planimetrias</h2>
+        <label for="archivoTexto">Fichero de planimetrias:</label>
+        <input multiple type="file" id="archivoTexto" onchange="viajes.getPlanimetriaMapbox(this.files);">
+    </section>
+    <section>
+        <h2>Altimetrias</h2>
+        <label for="archivoTexto">Fichero de altimetrias:</label>
+        <input multiple type="file" id="archivoTexto" onchange="viajes.getAltimetrias(this.files);">
+    </section>
+    <section ondragenter="event.stopPropagation(); event.preventDefault();"
+    ondragover="event.stopPropagation(); event.preventDefault();"
+    ondrop="event.stopPropagation(); event.preventDefault();
+    viajes.dodrop(event, 'mapdrop');">
+        <h2>Dropea un archivo de planimetria para mostrarlo en el mapa</h2>
+    </section>
+    
 </body>
 </html>

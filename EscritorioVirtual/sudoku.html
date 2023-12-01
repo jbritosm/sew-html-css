@@ -43,25 +43,17 @@
     window.addEventListener("keydown", (event) => {
         // Comprobar que haya una celda pulsada.
         let pulsada = false
-        let paragraphs = document.getElementsByTagName("p")
-        // puede haber mas de una casilla con el estado clicked?
-        for(let i = 0; i < sudoku.rows * sudoku.columns; i++) {
-            if(paragraphs[i].dataset.state === "clicked") {
-                pulsada = true
-                break;
-            }
-        }
-
-        if(!pulsada)
+        let paragraph = document.querySelector('p[data-state="clicked"]')
+        if(paragraph == null) {
             alert("Tienes que seleccionar una casilla vacia.")
-
-        if ((event.keyCode >= 49 && event.keyCode <= 57)
+        } else {
+            if ((event.keyCode >= 49 && event.keyCode <= 57)
             || (event.keyCode >= 97 && event.keyCode <= 105)) {
             sudoku.introduceNumber(event.key)
         } else {
             alert("Solo son válidos valores del 1 al 9.")
         }
-        // hacer algo
+        }        
     });
 </script>
 </html>

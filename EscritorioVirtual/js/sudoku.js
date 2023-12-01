@@ -13,9 +13,9 @@ class Sudoku {
         for(let i = 0; i < this.rows; i++) {
             for(let j = 0; j < this.columns; j++) {
                 if(this.tablero[index] != '.') {
-                    this.tableroArray[i][j] = parseInt(this.tablero[index])
+                    this.tableroArray[i][j] = this.tablero[index]
                 } else {
-                    this.tableroArray[i][j] = 0
+                    this.tableroArray[i][j] = "0"
                 }
                 index++
             }
@@ -27,10 +27,17 @@ class Sudoku {
         del Sudoku.  
     */
     createStructure() {
-        let main = document.getElementsByTagName("main")[0]
-        
-        for(let i = 0; i < this.rows * this.columns; i++) {
-            main.innerHTML += "\t<p></p>\n"
+        let main = document.getElementsByTagName("main")[0]        
+
+        let col
+        let row = -1
+        for(let i = 0; i < this.rows * this.columns; i++) {            
+            col = i % this.columns
+
+            if(i % this.columns == 0)
+                row++
+
+            main.innerHTML += `\t<p data-row="${row}" data-col="${col}"></p>\n`
         }
     }
 
@@ -45,7 +52,7 @@ class Sudoku {
         let pCounter = 0
         for(let i = 0; i < this.rows; i++) {
             for(let j = 0; j < this.columns; j++) {
-                if(this.tableroArray[i][j] === 0) {
+                if(this.tableroArray[i][j] === "0") {
                     /*
                         Cada vez que el elemento "p" designado
                         se clique con el puntero del raton la funcion 
@@ -55,7 +62,13 @@ class Sudoku {
                         Solo puede haber un estado de "clicked"
                     */                   
                     paragraphs[pCounter].onclick = function() {
-                        this.dataset.state = "clicked"
+                        let paragraph = document.querySelector('p[data-state="clicked"]')
+                        if(paragraph != null) {
+                            paragraph.dataset.state = "blocked"
+                            this.dataset.state = "clicked"
+                        } else {
+                            this.dataset.state = "clicked"
+                        }
                     }.bind(paragraphs[pCounter], this)
                 } else {
                     paragraphs[pCounter].innerHTML = this.tableroArray[i][j]
@@ -67,7 +80,30 @@ class Sudoku {
     }
 
     introduceNumber(key) {
+        let clickedParagraph = document.querySelector('p[data-state="clicked"]')
+        let row = clickedParagraph.dataset.row
+        let col = clickedParagraph.dataset.col
+
+        //1. No existe un número igual en la misma fila de la casilla seleccionada
+        if(this.tableroArray[row].includes(key))
+            return        
+        //2. No existe un número igual en la misma columna de la casilla seleccionada
+        if(this.tableroArray.map(e => e[col]).includes(key))
+            return
+        //3. No existe un número igual en la sub-cuadrícula de 3 x 3 en la que se encuentra la celda 
+        let quadrant = new Array();
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {                
+                quadrant.push(this.tableroArray[3 * Math.floor(row / 3) + i][3 * Math.floor(col / 3) + j]);
+            }
+        }
+        if(quadrant.includes(key))
+            return
         
+        // Numero válido
+        clickedParagraph.onclick = function(){return}
+        clickedParagraph.dataset.state = "correct"
+        clickedParagraph.innerHTML = key
     } 
 }
 

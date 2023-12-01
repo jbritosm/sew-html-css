@@ -26,17 +26,17 @@ class Noticias {
                 //La propiedad "result" es donde se almacena el contenido del archivo
                 //Esta propiedad solamente es válida cuando se termina la operación de lectura
                 let noticias = this.parseFile(lector.result)
-                noticias.array.forEach(noticia => {
+                for(let i = 0; i < noticias.length; i++) {
                     let text = `
-                        <section>
-                            <p>Titulo: ${noticia["titulo"]}</p>
-                            <p>Subtitulo: ${noticia["titulo"]}</p>
-                            <p></p>
-                            <p></p>
-                        </section>
+                        <section>\n
+                            <p>Titulo: ${noticias[i]["titulo"]}</p>\n
+                            <p>Subtitulo: ${noticias[i]["titulo"]}</p>\n
+                            <p>Texto: ${noticias[i]["texto"]}</p>\n
+                            <p>Autor: ${noticias[i]["autor"]}</p>\n
+                        </section>\n
                     `
-                    $("body form").before()
-                });
+                    $("body form").before(text)
+                }                
             }.bind(this)
             lector.readAsText(archivo);
         } else {
@@ -59,6 +59,27 @@ class Noticias {
             })
         }
         return resultado
+    }
+
+    anadirNoticia() {
+        let inputs = $("form input")   
+        
+        for(let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === "" || inputs[i].value === "") {
+                alert("Por favor rellena todos los campos.")
+                return
+            }
+        }
+        
+        let text = `
+            <section>\n
+                <p>Titulo: ${inputs[0].value}</p>\n
+                <p>Subtitulo: ${inputs[1].value}</p>\n
+                <p>Texto: ${inputs[2].value}</p>\n
+                <p>Autor: ${inputs[3].value}</p>\n
+            </section>\n
+        `
+        $("body form").before(text)                       
     }
 }
 

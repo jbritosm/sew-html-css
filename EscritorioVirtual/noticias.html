@@ -28,20 +28,21 @@
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
         </header>
-        <p>
-            <input type="file" id="archivoTexto" onchange="noticias.leerArchivoTexto(this.files);">
-        </p>
-        <form action="/action_page.php">
-            <label for="titulo">TITULO:</label>
-            <input type="text" id="titulo" name="titulo" value="TITULO">
-            <label for="subtitulo">SUBTITULO:</label>
-            <input type="text" id="subtitulo" name="subtitulo" value="SUBTITULO">
-            <label for="texto">TEXTO:</label>
-            <input type="text" id="texto" name="texto" value="TEXTO">
-            <label for="autor">AUTOR:</label>
-            <input type="text" id="autor" name="autor" value="AUTOR">
-            <input type="submit" value="Añadir">
-        </form>
+        <section>
+            <label for="archivoTexto">Fichero de noticias:</label>
+            <input type="file" id="archivoTexto" onchange="noticias.leerArchivoTexto(this.files);">        
+            <form onsubmit="return false">
+                <label for="titulo">TITULO:</label>
+                <input type="text" id="titulo" name="titulo" value="">
+                <label for="subtitulo">SUBTITULO:</label>
+                <input type="text" id="subtitulo" name="subtitulo" value="">
+                <label for="texto">TEXTO:</label>
+                <input type="text" id="texto" name="texto" value="">
+                <label for="autor">AUTOR:</label>
+                <input type="text" id="autor" name="autor" value="">
+                <input type="submit" value="Añadir" onclick="noticias.anadirNoticia()">
+            </form>
+        </section>
         <script src="js/noticias.js"></script>
 </body>
 </html>
