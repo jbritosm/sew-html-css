@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
 <html lang="es">
+
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <title>Escritorio Virtual - Sudoku</title>
-    <meta name ="author" content ="Joaquín Salustiano Britos Morales" />
-    <meta name ="description" content ="Pagina del Sudoku." />
-    <meta name ="keywords" content ="" />
-    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Joaquín Salustiano Britos Morales" />
+    <meta name="description" content="Pagina del Sudoku." />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="stylesheet" type="text/css" href="estilo/sudoku.css" />
-    <link rel="icon" href="multimedia/imagenes/favicon.png"/>
+    <link rel="icon" href="multimedia/imagenes/favicon.png" />
 </head>
 
 <body>
@@ -27,33 +28,33 @@
             <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
-        </header>
+    </header>
     <section>
         <h2>Menú</h2>
-        <a href="memoria.html" accesskey="E" tabindex="7">Juego de memoria</a>
-        <a href="sudoku.html" accesskey="E" tabindex="7">Sudoku</a>
+        <a href="memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
+        <a href="sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
+        <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
     </section>
-    <main></main>    
+    <main></main>
 </body>
 <script src="js/sudoku.js"></script>
 <script>
+    // Esta bien inicializado?
     let sudoku = new Sudoku("3.4.69.5....27...49.2..4....2..85.198.9...2.551.39..6....8..5.32...46....4.75.9.6")
-    sudoku.paintSudoku()    
+    sudoku.paintSudoku()
 
-    window.addEventListener("keydown", (event) => {
+    addEventListener("keydown", (event) => {
         // Comprobar que haya una celda pulsada.
-        let pulsada = false
-        let paragraph = document.querySelector('p[data-state="clicked"]')
-        if(paragraph == null) {
-            alert("Tienes que seleccionar una casilla vacia.")
-        } else {
-            if ((event.keyCode >= 49 && event.keyCode <= 57)
-            || (event.keyCode >= 97 && event.keyCode <= 105)) {
-            sudoku.introduceNumber(event.key)
+        if (/^[0-9]+$/.test(event.key)) {
+            if( $("main > p[data-state='clicked']").length > 0) {
+                sudoku.introduceNumber(event.key)
+            } else {
+                alert("Tienes que seleccionar una casilla")
+            }
         } else {
             alert("Solo son válidos valores del 1 al 9.")
         }
-        }        
-    });
+    })
 </script>
+
 </html>

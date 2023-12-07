@@ -1,97 +1,97 @@
-/*Joaquín Salustiano Britos Morales UO276044*/
+/* Joaquín Salustiano Britos Morales UO276044 */
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 body {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     color: black;
     background-color: #EEEDE7;      
 }
 
-/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
+/* Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1) */
 h1, h2, h3, h4, h5 {
     background-color: black;
     color: white;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 h1 {
     font-size: x-large;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 h2 {
     font-size: large;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 h3 {
     font-size: medium;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 h4 {
     font-size: small;
 }
 
-/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
+/* Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1) */
 section, form, p {
-    /*Hereda color #000000 de body*/
-    background-color: #D6C4C0;
+    /* Hereda color #000000 de body */
+    background-color: #b9b3b2;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 a {
     color: darkblue;
     background-color: #B9B7BD;
 }
 
-/*Especificidad: (0, 1, 1)*/
+/* Especificidad: (0, 1, 1) */
 a:hover {
-    /*Hereda background color #B9B7BD de a*/
+    /* Hereda background color #B9B7BD de a */
     color: aquamarine;
 }
 
-/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
+/* Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1) */
 ul, ol, table, dl {
-    /*Hereda color #000000 de body*/
+    /* Hereda color #000000 de body */
     background-color: coral;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 li {
-    /*Hereda color #000000 de body*/
+    /* Hereda color #000000 de body */
     background-color: #868B8E;
 }
 
-/*Especificidad: (0, 1, 2)*/
+/* Especificidad: (0, 1, 2) */
 ul li:nth-child(3) {
     font-size: larger;
-    /*Hereda color #000000 de body*/
+    /* Hereda color #000000 de body */
     background-color: white;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 dt {
-    /*Hereda color #000000 de body*/
+    /* Hereda color #000000 de body */
     background-color: #868B8E;  
     font-size: medium;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 dd {
-    /*Hereda color #000000 de body*/
+    /* Hereda color #000000 de body */
     background-color: #868B8E;
     font-size: small;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1) */
 table {
-    /*Hereda color 000000 de body*/
+    /* Hereda color 000000 de body */
     border-collapse: collapse;
     border: 3px solid black;
 }
 
-/*Especificidad: (0, 0, 1), (0, 0, 1)*/
+/* Especificidad: (0, 0, 1), (0, 0, 1) */
 img, video {
     width: 50%;
     height: auto;

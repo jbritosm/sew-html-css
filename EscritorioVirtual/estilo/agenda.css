@@ -1,15 +1,18 @@
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1)*/
 body {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     color: white;
-    background-color: black;      
+    background-color: black;
 }
-/*Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
-h1, h2, nav {
+
+/* Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
+h1,
+h2,
+nav {
     background-color: red;
 }
 
-/*Especificidad: (0, 0, 1)*/
+/* Especificidad: (0, 0, 1)*/
 a {
     background-color: white;
 }
