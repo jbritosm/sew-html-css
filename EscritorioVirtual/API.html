@@ -3,20 +3,22 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>Escritorio Virtual - Página principal</title>
+    <title>EscritorioVirtual - Aplicacion de mapa dinamico</title>
     <meta name ="author" content ="Joaquín Salustiano Britos Morales" />
-    <meta name ="description" content ="Página principal de nuestro escritorio virtual" />
-    <meta name ="keywords" content ="desarrollo" />
+    <meta name ="description" content ="Pagina de la aplicacion de mapa dinamico." />
+    <meta name ="keywords" content ="archivos, planimetria" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet " type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/API.css" />    
     <link rel="icon" href="multimedia/imagenes/favicon.png"/>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="js/api.js" defer></script>
 </head>
 
-
 <body>
-    <script src="js/fondo.js"></script>
     <header>
         <!-- Datos con el contenidos que aparece en el navegador -->
         <h1>Escritorio Virtual</h1>
@@ -31,7 +33,13 @@
             <a href="API.html" accesskey="P" tabindex="8">Aplicacion</a>
 
         </nav>
-        </header>
+    </header>
+    <section ondragenter="event.stopPropagation(); event.preventDefault();"
+    ondragover="event.stopPropagation(); event.preventDefault();"
+    ondrop="event.stopPropagation(); event.preventDefault();
+    api.dodrop(event, 'mapdrop');">
+        <h2>Arrastra y suelta un archivo de planimetria para mostrarlo en el mapa</h2>
+    </section>
     
 </body>
 </html>

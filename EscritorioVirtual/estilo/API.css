@@ -1,0 +1,4 @@
+body > section, body > section > section {
+    width: 100%;
+    height: 20vw;
+}

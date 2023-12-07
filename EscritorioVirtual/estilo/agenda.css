@@ -9,10 +9,21 @@ body {
 h1,
 h2,
 nav {
-    background-color: red;
+    background-color: #F03C2B;
 }
 
 /* Especificidad: (0, 0, 1)*/
 a {
-    background-color: white;
+    background-color: #F03C2B;
+}
+
+body > ul {
+    background-color: #F03C2B;
+    margin: 1%;
+}
+
+li {
+    color: black;
+    background-color: aliceblue
+    ;
 }

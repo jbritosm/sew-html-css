@@ -27,26 +27,44 @@
             $this->pass = "DBPSWD2023";
             $this->dbname = "records";
         }
-    }
 
-    if(count($_POST) > 0) {
-        $conn = new mysqli($servername, $username, $password, $database);
-        if($conn->connect_error) {
-            die("Error de conexion.". $conn->connect_error);
+        function insertData($nombre, $apellidos, $nivel, $tiempo) {
+            $db = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
+
+            $stmt = $db->prepare("INSERT INTO registro
+                                  VALUES (?, ?, ?, ?);");
+
+            $stmt->bind_param('sssi', $nombre, $apellidos, $nivel, $tiempo);
+            $stmt->execute();
+    
+            $stmt->close();
+
+            return $this->getData($db);
         }
 
-        $nombre = $_POST["nombre"];
-        $apellidos = $_POST["apellidos"];
-        $dificultad = $_POST["dificultad"];
-        $tiempo = $_POST["tiempo"];
-        
-        list($hours, $minutes, $seconds) = explode(':', $tiempo);
-        $tiempo = $hours * 3600 + $minutes * 60 + $seconds;
-        
-        $sql = "INSERT INTO Records VALUES($nombre, $apellidos, $dificultad, $tiempo)";
-        $conn->query($sql);
-        
-    }
+        function getData($db) {
+
+            $result = $db->query("SELECT *
+                                  FROM registro
+                                  ORDER BY tiempo ASC
+                                  LIMIT 10;");
+            
+            $rows = array();
+            if ($result->num_rows > 0) {               
+
+                while($row = $result->fetch_assoc()) {
+                    array_push($rows, $row);
+                }
+                $db->close();
+                return $rows;
+            } else {
+                echo "No se ha seleccionado ninguna fila.";
+            }                       
+
+            $db->close();
+            
+        }
+    }   
 ?>
     <header>
         <!-- Datos con el contenidos que aparece en el navegador -->
@@ -59,6 +77,7 @@
             <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
             <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+            <a href="API.html" accesskey="P" tabindex="8">Aplicacion</a>
         </nav>
     </header>
     <section>
@@ -67,10 +86,44 @@
         <a href="sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
         <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
     </section>
-    <main></main>
+    <main></main>    
+    <section>
+        <?php
+            if(count($_POST) > 0) {
+                $nombre = $_POST["nombre"];
+                $apellidos = $_POST["apellidos"];
+                $nivel = $_POST["dificultad"];
+                $tiempo = $_POST["tiempo"];
+                
+                $record = new Record();
+                $content = "\t<h2>Ranking del crucigrama: </h2>";
+                $content .= "\t<ol>\n";
+                foreach ($record->insertData($nombre, $apellidos, $nivel, $tiempo) as $key => $value) {
+                    $content .= "\t\t<li>Nombre: {$value['nombre']} Apellidos: {$value['apellidos']} Nivel: {$value['nivel']} Tiempo: {$value['tiempo']}</li>\n";
+                }         
+                $content .= "\t</ol>\n";  
+                echo $content;    
+            }
+        ?>
+    </section>
+    <section data-type="botonera">
+        <h2>Botonera</h2>
+        <button onclick="crucigrama.introduceElement(1)">1</button>
+        <button onclick="crucigrama.introduceElement(2)">2</button>
+        <button onclick="crucigrama.introduceElement(3)">3</button>
+        <button onclick="crucigrama.introduceElement(4)">4</button>
+        <button onclick="crucigrama.introduceElement(5)">5</button>
+        <button onclick="crucigrama.introduceElement(6)">6</button>
+        <button onclick="crucigrama.introduceElement(7)">7</button>
+        <button onclick="crucigrama.introduceElement(8)">8</button>
+        <button onclick="crucigrama.introduceElement(9)">9</button>
+        <button onclick="crucigrama.introduceElement('*')">*</button>
+        <button onclick="crucigrama.introduceElement('+')">+</button>
+        <button onclick="crucigrama.introduceElement('-')">-</button>
+        <button onclick="crucigrama.introduceElement('/')">/</button>
+    </section>
     <script>
         crucigrama.paintMathword()
-        crucigrama.createRecordForm()
 
         addEventListener("keydown", (event) => {
             // Comprobar que haya una celda pulsada.

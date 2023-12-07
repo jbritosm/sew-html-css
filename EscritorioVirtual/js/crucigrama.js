@@ -7,7 +7,7 @@ class Crucigrama {
         this.init_time
         this.end_time
         this.boardArray = [...Array(this.rows)].map(e => Array(this.columns))
-        this.tiempo = "10:1:2"
+        this.tiempo
         this.start()
     }
 
@@ -99,13 +99,14 @@ class Crucigrama {
 
     calculate_date_difference() {
         let milliseconds = Math.abs(this.end_time - this.init_time);
+        this.tiempo = milliseconds
 
         let seconds = Math.floor((milliseconds / 1000) % 60);
         let minutes = Math.floor((milliseconds / 1000 / 60) % 60);
         let hours = Math.floor((milliseconds / 1000 / 60 / 60) % 24);
-        this.tiempo = `${hours}:${minutes}:${seconds}`
+        
 
-        return this.tiempo
+        return `${hours}:${minutes}:${seconds}`
     }
 
     introduceElement(key) {
@@ -192,16 +193,16 @@ class Crucigrama {
         let form = $("<form action='#' method='POST' name='record'></form>")        
         // Añadir nombre
         form.append("<label for='nombre'>Nombre:</label>")
-        form.append("<input id='nombre' name='nombre' type='text' />")
+        form.append("<input id='nombre' name='nombre' type='text' value='aaa' />")
         // Añadir apellidos
         form.append("<label for='apellidos'>Apellidos:</label>")
-        form.append("<input id='apellidos' name='apellidos' type='text' />")
+        form.append("<input id='apellidos' name='apellidos' type='text' value='aaa' />")
         // Añadir Dificultad
         form.append("<label for='dificultad'>Dificultad:</label>")
         form.append(`<input id='dificultad' name='dificultad' type='text' value='${this.dificultad}' readonly />`)
         // Añadir Tiempo
         form.append("<label for='tiempo'>Tiempo:</label>")
-        form.append(`<input id='tiempo' name='tiempo' type='text' value='${this.tiempo}' readonly />`)
+        form.append(`<input id='tiempo' name='tiempo' type='number' value='${this.tiempo}' readonly />`)
         form.append("<input type='submit' value='Enviar'/>")
 
         $("main").after(form)

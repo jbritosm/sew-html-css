@@ -1,15 +1,15 @@
 /*Especificidad (0, 1, 2), (0, 1, 3), (0, 1, 2), (0, 1, 3)*/
-body > section:nth-child(3) > section, body > section:nth-child(5) > section, body > section:nth-last-of-type(1), body > section:nth-last-of-type(1) > section {
+body > section:nth-child(3) > section, body > section:nth-child(5) > section {
     width: 100%;
     height: 20vw;
 }
 /* Especificidad (0, 1, 2) */
-body > section:nth-last-of-type(2) {
+body > section:last-of-type {
     display: flex;
     flex-wrap: wrap;
 }
 /* Especificidad (0, 1, 3), (0, 1, 3) */
-body > section:nth-last-of-type(2) > h2, body > section:nth-last-of-type(2) > input {
+body > section:last-of-type > h2, body > section:nth-last-of-type(2) > input {
     width: 100%;
 }
 

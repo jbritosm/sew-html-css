@@ -30,6 +30,7 @@
             <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
             <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+            <a href="API.html" accesskey="P" tabindex="8">Aplicacion</a>
         </nav>
     </header>
     <section>
@@ -56,12 +57,7 @@
         <label for="archivoTexto">Fichero de altimetrias:</label>
         <input multiple type="file" id="archivoTexto" onchange="viajes.getAltimetrias(this.files);">
     </section>
-    <section ondragenter="event.stopPropagation(); event.preventDefault();"
-    ondragover="event.stopPropagation(); event.preventDefault();"
-    ondrop="event.stopPropagation(); event.preventDefault();
-    viajes.dodrop(event, 'mapdrop');">
-        <h2>Dropea un archivo de planimetria para mostrarlo en el mapa</h2>
-    </section>
+    
     
 </body>
 </html>

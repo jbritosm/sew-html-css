@@ -6,6 +6,7 @@ main {
     grid-template-columns: repeat(9, 1fr);
     gap: 0;
     margin: 5%;
+    margin-bottom: 0%;
 }
 
 /* Especificidad (0, 0, 1) */
@@ -34,4 +35,51 @@ p {
 p[data-state=empty] {
     /* Hereda color #000000 de body */
     background-color: #000;
+}
+
+/* Estilos para una mediaquery
+que muestre la botonera en tablet y móvil */
+/* Especificidad (0, 1, 1) */
+
+section[data-type=botonera] {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Solo se muestra en pruebas en dispositivos moviles */
+    visibility: hidden;
+}
+/* Especificidad (0, 1, 2) */
+section[data-type=botonera] h2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Especificidad (0, 1, 2) */
+section[data-type=botonera] button {
+    width: calc(15% - 1em);
+    height: 4em;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Especificidad (0, 0, 1) */
+li {
+    background-color: white;
+}
+
+/* Especificidad (0, 0, 1) */
+ol {
+    background-color: #868B8E;
+    margin: 1%;
+}
+
+form {
+    background-color: #868B8E;
+    display: flex;
+    flex-direction: column;
+    border: #000 solid;
+    margin: 1%;
 }

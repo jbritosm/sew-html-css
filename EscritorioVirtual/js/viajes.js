@@ -5,7 +5,6 @@ class Viajes {
         mapboxgl.accessToken = this.apiKey
         navigator.geolocation.getCurrentPosition(this.getPosicion.bind(this), this.verErrores.bind(this));
         this.planimetrias = []
-        this.addFullscreenListener()
     }
     getPosicion(posicion){
         this.longitud         = posicion.coords.longitude; 
@@ -176,8 +175,8 @@ class Viajes {
             let kml = parser.parseFromString(lector.result,"text/xml");
             let id = `map${i}`
             let name = kml.getElementsByTagName("name")[0].textContent
-            $("body section:eq(4)").append(`<h3>${name}</h3>`)
-            $("body section:eq(4)").append(`<section id=${id}></section>`)
+            $("body > section:eq(3)").append(`<h3>${name}</h3>`)
+            $("body > section:eq(3)").append(`<section id=${id}></section>`)
             
             this.crearPlanimetrias(kml, id)
 
@@ -193,7 +192,6 @@ class Viajes {
         for(let i = 0; i < coordenadas.length; i++) {
             arrayCoordenadas.push([coordenadas[i].split(",")[0], coordenadas[i].split(",")[1]])      
         }
-        console.log(arrayCoordenadas)
         
         let map = new mapboxgl.Map({
             container: id, // container ID
@@ -246,47 +244,7 @@ class Viajes {
             lector.readAsText(archivo);    
         }
     }
-
-    dodrop(event, id) {
-        let dt = event.dataTransfer;
-        let archivo = dt.files[0]
-
-        let lector = new FileReader();
-            let parser = new DOMParser();
-            lector.onload = function (evento) {
-            let kml = parser.parseFromString(lector.result,"text/xml");
-            $("body > section:nth-last-of-type(1)").append(`<section id=${id}></section>`)
-            
-            this.crearPlanimetrias(kml, id)
-        }.bind(this)
-        lector.readAsText(archivo);
-    }
-
-    addFullscreenListener() {
-        document.addEventListener(
-            "keydown",
-            (e) => {if(e.key === "Enter") this.toggleFullscreen()},
-            false,
-          );
-    }
-
-    toggleFullscreen() {
-        let elem = document.querySelector("body > section:nth-last-of-type(1) > section");
-        if(elem === null) {
-            alert("Por favor dropea un archivo html en la zona designada.")
-            return
-        }
-
-        if (!document.fullscreenElement) {
-          elem.requestFullscreen().catch((err) => {
-            alert(
-              `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
-            );
-          });
-        } else {
-          document.exitFullscreen();
-        }
-    }
+    
 }
 
 let viajes = new Viajes()
