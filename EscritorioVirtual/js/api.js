@@ -1,4 +1,4 @@
-class API {
+class api {
     constructor() {
         this.apiKey = "pk.eyJ1IjoiamJyaXRvc20iLCJhIjoiY2xwamowcWh1MDBrcjJqbGJocTQ0NDBycSJ9.fIpnrp47Ldja1ZKWBFax-Q";        
         mapboxgl.accessToken = this.apiKey
@@ -59,7 +59,7 @@ class API {
             let parser = new DOMParser();
             lector.onload = function (evento) {
             let kml = parser.parseFromString(lector.result,"text/xml");
-            $("body section").append(`<section id=${id}></section>`)
+            $("body > section:nth-child(3)").append(`<section id=${id}></section>`)
             
             this.crearPlanimetrias(kml, id)
         }.bind(this)
@@ -93,4 +93,4 @@ class API {
     }
 }
 
-let api = new API()
+let api = new api()

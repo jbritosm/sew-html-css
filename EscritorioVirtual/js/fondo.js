@@ -10,7 +10,8 @@ class Fondo {
             api_key: "dc7f40bc454df978bd1ac3fafb0095d8",
             lat: this.coordenadasCapital["latitud"],
             lon: this.coordenadasCapital["longitud"],
-            format: "json"
+            format: "json",
+            tags: `${this.nombreCapital},${this.nombrePais}`
         }).done(function(data) {
             let photo = data["photos"]["photo"][0]
             let server_id = photo["server"]

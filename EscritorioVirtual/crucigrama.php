@@ -1,24 +1,3 @@
-<!DOCTYPE HTML>
-<html lang="es">
-
-<head>
-    <!-- Datos que describen el documento -->
-    <meta charset="UTF-8" />
-    <title>Escritorio Virtual - Crucigrama</title>
-    <meta name="author" content="Joaquín Salustiano Britos Morales" />
-    <meta name="description" content="Juego de crucigrama matematico" />
-    <meta name="keywords" content="crucigrama, matematico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/crucigrama.css" />
-    <link rel="icon" href="multimedia/imagenes/favicon.png" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="js/crucigrama.js"></script>
-</head>
-
-<body>
 <?php
     class Record {
         public function __construct() {
@@ -61,11 +40,31 @@
                 echo "No se ha seleccionado ninguna fila.";
             }                       
 
-            $db->close();
-            
+            $db->close();            
         }
     }   
 ?>
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>Escritorio Virtual - Crucigrama</title>
+    <meta name="author" content="Joaquín Salustiano Britos Morales" />
+    <meta name="description" content="Juego de crucigrama matematico" />
+    <meta name="keywords" content="crucigrama, matematico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/crucigrama.css" />
+    <link rel="icon" href="multimedia/imagenes/favicon.png" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/crucigrama.js"></script>
+</head>
+
+<body>
     <header>
         <!-- Datos con el contenidos que aparece en el navegador -->
         <h1>Escritorio Virtual</h1>
@@ -75,9 +74,9 @@
             <a href="noticias.html" accesskey="N" tabindex="3">Noticias</a>
             <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
             <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
-            <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
+            <a href="viajes.php" accesskey="V" tabindex="6">Viajes</a>
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
-            <a href="API.html" accesskey="P" tabindex="8">Aplicacion</a>
+            <a href="api.html" accesskey="P" tabindex="8">Aplicacion</a>
         </nav>
     </header>
     <section>
@@ -85,6 +84,8 @@
         <a href="memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
         <a href="sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
         <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
+        <a href="api.html" accesskey="P" tabindex="11">Aplicacion</a>
+        <a href="php/biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
     </section>
     <main></main>    
     <section>

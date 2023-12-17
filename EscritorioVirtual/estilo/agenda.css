@@ -1,29 +1,18 @@
-/* Especificidad: (0, 0, 1)*/
-body {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    color: white;
-    background-color: black;
-}
-
-/* Especificidad: (0, 0, 1), (0, 0, 1), (0, 0, 1)*/
-h1,
-h2,
-nav {
-    background-color: #F03C2B;
-}
+/* Joaquín Salustiano Britos Morales UO276044 */
 
 /* Especificidad: (0, 0, 1)*/
-a {
-    background-color: #F03C2B;
-}
-
-body > ul {
-    background-color: #F03C2B;
-    margin: 1%;
-}
-
 li {
     color: black;
     background-color: aliceblue
     ;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > section {
+    width: 49%;
+    border: 0.2em solid #ffffff;
 }

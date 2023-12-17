@@ -1,16 +1,6 @@
 class Noticias {
     constructor() {
-        this.checkNavigator()
         this.fileContent = ""
-    }
-
-    checkNavigator() {
-        if (window.File && window.FileReader && window.FileList && window.Blob) {  
-        //El navegador soporta el API File
-            $("body header").after("<p>Este navegador soporta el API File </p>");
-        } else {
-            $("body header").after("<p>¡¡¡ Este navegador NO soporta el API File y este programa puede no funcionar correctamente !!!</p>");
-        }
     }
 
     leerArchivoTexto(files) 

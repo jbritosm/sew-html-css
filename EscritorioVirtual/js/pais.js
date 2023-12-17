@@ -33,9 +33,9 @@ class Pais {
 
     writeLista() {
         this.text = "<ul>\n"
-        this.text += this.toListElement(this.getPoblacion())
-        this.text += this.toListElement(this.getTipoGobierno())
-        this.text += this.toListElement(this.getReligion())
+        this.text += this.toListElement(`Poblacion: ${this.getPoblacion()}`)
+        this.text += this.toListElement(`Gobierno: ${this.getTipoGobierno()}`)
+        this.text += this.toListElement(`Religion: ${this.getReligion()}`)
         this.text += "</ul>"
         return this.text
     }
@@ -81,12 +81,12 @@ class Pais {
                         // Add h2 con fecha
                         $("body").append(`<h2>${list[i]["dt_txt"]}</h2>`)
                         // Add ul con datos
-                        $("body").append(`<img src=\"${icon_url}\" alt=\"icono que representa el clima actual\"></img>`)
+                        $("body").append(`<img src=\"${icon_url}\" alt=\"icono que representa el clima actual\"/>`)
                         $("body").append("<ul>")
                         $("body ul:last-child").append(`<li>Temperatura maxima: ${list[i]["main"]["temp_max"]}</li>`)
                         $("body ul:last-child").append(`<li>Temperatura minima: ${list[i]["main"]["temp_min"]}</li>`)
                         $("body ul:last-child").append(`<li>Porcentaje de humedad: ${list[i]["main"]["humidity"]}%</li>`)
-                        $("body ul:last-child").append(`<li>Precipitaciones: ${list[i]["pop"] * 100.0}%</li>`)
+                        $("body ul:last-child").append(`<li>Precipitaciones: ${(list[i]["pop"] * 100).toFixed(2)}%</li>`)
                     }
                 }
             }

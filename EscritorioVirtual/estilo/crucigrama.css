@@ -1,7 +1,9 @@
+/* Joaquín Salustiano Britos Morales UO276044 */
+
 /* Especificidad (0, 0, 1) */
 main {
-    width: 600px;
-    height: 500px;
+    width: 50vw;
+    height: 50vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 0;
@@ -40,7 +42,6 @@ p[data-state=empty] {
 /* Estilos para una mediaquery
 que muestre la botonera en tablet y móvil */
 /* Especificidad (0, 1, 1) */
-
 section[data-type=botonera] {
     display: flex;
     gap: 1em;
@@ -66,16 +67,6 @@ section[data-type=botonera] button {
 }
 
 /* Especificidad (0, 0, 1) */
-li {
-    background-color: white;
-}
-
-/* Especificidad (0, 0, 1) */
-ol {
-    background-color: #868B8E;
-    margin: 1%;
-}
-
 form {
     background-color: #868B8E;
     display: flex;

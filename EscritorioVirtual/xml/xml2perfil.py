@@ -19,7 +19,7 @@ def polyline(ruta, file):
     max_altitude = max(altitudes)
 
     start = f"""<?xml version="1.0" encoding="utf-8"?>
-        <svg width="150" height="{max_altitude}" style="overflow:visible " version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg width="150" height="{max_altitude}" style="overflow:visible " version="1.1" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="150" height="{max_altitude}" stroke="blue" stroke-width="4" fill="none" />
 """
 

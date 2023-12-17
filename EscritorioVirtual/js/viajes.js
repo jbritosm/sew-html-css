@@ -5,6 +5,12 @@ class Viajes {
         mapboxgl.accessToken = this.apiKey
         navigator.geolocation.getCurrentPosition(this.getPosicion.bind(this), this.verErrores.bind(this));
         this.planimetrias = []
+
+        this.slides = document.querySelectorAll("article > img");
+        // current slide counter
+        this.curSlide = 0;
+        // maximum number of slides
+        this.maxSlide = this.slides.length - 1;
     }
     getPosicion(posicion){
         this.longitud         = posicion.coords.longitude; 
@@ -244,7 +250,34 @@ class Viajes {
             lector.readAsText(archivo);    
         }
     }
+
+    nextSlide() {
+        // check if current slide is the last and reset current slide
+        if (this.curSlide === this.maxSlide) {
+            this.curSlide = 0;
+        } else {
+            this.curSlide++;
+        }
     
+            //   move slide by -100%
+        this.slides.forEach((slide, indx) => {
+            var trans = 100 * (indx - this.curSlide);
+            $(slide).css('transform', 'translateX(' + trans + '%)')
+        });            
+    }
+
+    prevSlide() {
+        if (this.curSlide === 0) {
+            this.curSlide = this.maxSlide;
+        } else {
+            this.curSlide--;
+        }
+
+        this.slides.forEach((slide, indx) => {
+            var trans = 100 * (indx - this.curSlide);
+            $(slide).css('transform', 'translateX(' + trans + '%)')
+        });
+    }    
 }
 
 let viajes = new Viajes()
