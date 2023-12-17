@@ -40,25 +40,24 @@
         <a href="php/biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
     </section>
     <main></main>
-</body>
-<script src="js/sudoku.js"></script>
-<script>
-    // Esta bien inicializado?
-    let sudoku = new Sudoku("3.4.69.5....27...49.2..4....2..85.198.9...2.551.39..6....8..5.32...46....4.75.9.6")
-    sudoku.paintSudoku()
-
-    addEventListener("keydown", (event) => {
-        // Comprobar que haya una celda pulsada.
-        if (/^[0-9]+$/.test(event.key)) {
-            if($("main > p[data-state='clicked']").length > 0) {
-                sudoku.introduceNumber(event.key)
+    <script src="js/sudoku.js"></script>
+    <script>
+        // Esta bien inicializado?
+        let sudoku = new Sudoku("3.4.69.5....27...49.2..4....2..85.198.9...2.551.39..6....8..5.32...46....4.75.9.6")
+        sudoku.paintSudoku()
+    
+        addEventListener("keydown", (event) => {
+            // Comprobar que haya una celda pulsada.
+            if (/^[0-9]+$/.test(event.key)) {
+                if($("main > p[data-state='clicked']").length > 0) {
+                    sudoku.introduceNumber(event.key)
+                } else {
+                    alert("Tienes que seleccionar una casilla")
+                }
             } else {
-                alert("Tienes que seleccionar una casilla")
+                alert("Solo son válidos valores del 1 al 9.")
             }
-        } else {
-            alert("Solo son válidos valores del 1 al 9.")
-        }
-    })
-</script>
-
+        })
+    </script>
+</body>
 </html>

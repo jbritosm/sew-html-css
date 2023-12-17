@@ -87,26 +87,24 @@
         <a href="api.html" accesskey="P" tabindex="11">Aplicacion</a>
         <a href="php/biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
     </section>
-    <main></main>    
-    <section>
-        <?php
-            if(count($_POST) > 0) {
-                $nombre = $_POST["nombre"];
-                $apellidos = $_POST["apellidos"];
-                $nivel = $_POST["dificultad"];
-                $tiempo = $_POST["tiempo"];
-                
-                $record = new Record();
-                $content = "\t<h2>Ranking del crucigrama: </h2>";
-                $content .= "\t<ol>\n";
-                foreach ($record->insertData($nombre, $apellidos, $nivel, $tiempo) as $key => $value) {
-                    $content .= "\t\t<li>Nombre: {$value['nombre']} Apellidos: {$value['apellidos']} Nivel: {$value['nivel']} Tiempo: {$value['tiempo']}</li>\n";
-                }         
-                $content .= "\t</ol>\n";  
-                echo $content;    
-            }
-        ?>
-    </section>
+    <main></main>  
+    <?php
+        if(count($_POST) > 0) {
+            $nombre = $_POST["nombre"];
+            $apellidos = $_POST["apellidos"];
+            $nivel = $_POST["dificultad"];
+            $tiempo = $_POST["tiempo"];
+            
+            $record = new Record();
+            $content = "\t<h2>Ranking del crucigrama: </h2>";
+            $content .= "\t<ol>\n";
+            foreach ($record->insertData($nombre, $apellidos, $nivel, $tiempo) as $key => $value) {
+                $content .= "\t\t<li>Nombre: {$value['nombre']} Apellidos: {$value['apellidos']} Nivel: {$value['nivel']} Tiempo: {$value['tiempo']}</li>\n";
+            }         
+            $content .= "\t</ol>\n";  
+            echo $content;    
+        }
+    ?>
     <section data-type="botonera">
         <h2>Botonera</h2>
         <button onclick="crucigrama.introduceElement(1)">1</button>

@@ -1,4 +1,4 @@
-class api {
+class API {
     constructor() {
         this.apiKey = "pk.eyJ1IjoiamJyaXRvc20iLCJhIjoiY2xwamowcWh1MDBrcjJqbGJocTQ0NDBycSJ9.fIpnrp47Ldja1ZKWBFax-Q";        
         mapboxgl.accessToken = this.apiKey
@@ -93,4 +93,4 @@ class api {
     }
 }
 
-let api = new api()
+let api = new API()

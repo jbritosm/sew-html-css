@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <title>Escritorio Virtual - Noticias</title>
+    <meta name="author" content="Joaquín Salustiano Britos Morales">
+    <meta name="description" content="Página de noticias de nuestro escritorio virtual.">
+    <meta name="keywords" content="fichero,noticias">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Escritorio%20Virtual%20-%20Noticias_files/estilo.css">
+    <link rel="stylesheet" type="text/css" href="Escritorio%20Virtual%20-%20Noticias_files/layout.css">
+    <link rel="stylesheet" type="text/css" href="Escritorio%20Virtual%20-%20Noticias_files/noticias.css">
+    <link rel="icon" href="http://localhost/sew-html-css/EscritorioVirtual/multimedia/imagenes/favicon.png">
+    <script src="Escritorio%20Virtual%20-%20Noticias_files/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Datos con el contenidos que aparece en el navegador -->
+        <h1>Escritorio Virtual</h1>
+        <nav>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/index.html" accesskey="I" tabindex="1">Inicio</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/noticias.html" accesskey="N" tabindex="3">Noticias</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/agenda.html" accesskey="A" tabindex="4">Agenda</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/viajes.php" accesskey="V" tabindex="6">Viajes</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/juegos.html" accesskey="J" tabindex="7">Juegos</a>
+        </nav>
+        </header>
+        <section>
+            <h2>Noticias</h2>
+            <label for="archivoTexto">Fichero de noticias:</label>
+            <input type="file" id="archivoTexto" onchange="noticias.leerArchivoTexto(this.files);">        
+            
+                        <section>
+
+                            <h3>Titulo: El aumento de la producción científica desborda de papeleo a la Universidad</h3>
+
+                            <p>Subtitulo: El aumento de la producción científica desborda de papeleo a la Universidad</p>
+
+                            <p>Texto: A la Universidad de Oviedo le desborda el papeleo por el gran salto dado en investigación</p>
+
+                            <p>Autor: Mónica Salas</p>
+
+                        </section>
+
+                    
+                        <section>
+
+                            <h3>Titulo: La Universidad presume de equipos deportivos en una jornada ilusionante</h3>
+
+                            <p>Subtitulo: La Universidad presume de equipos deportivos en una jornada ilusionante</p>
+
+                            <p>Texto: Ayer, por primera vez, todos los equipos deportivos de la Universidad de Oviedo realizaron una presentación conjunta</p>
+
+                            <p>Autor: Juan Sanchez</p>
+
+                        </section>
+
+                    
+                        <section>
+
+                            <h3>Titulo: Investigadores que se van por unos meses al otro lado, a la empresa</h3>
+
+                            <p>Subtitulo: Investigadores que se van por unos meses al otro lado, a la empresa</p>
+
+                            <p>Texto: Una cosa es colaborar con una empresa y otra bien diferente es poder trabajar en ella durante unos meses</p>
+
+                            <p>Autor: Manuel Rodriguez</p>
+
+                        </section>
+
+                    
+            <section>
+
+                <h3>Titulo: 1</h3>
+
+                <p>Subtitulo: 1</p>
+
+                <p>Texto: 1</p>
+
+                <p>Autor: 1</p>
+
+            </section>
+
+        <form onsubmit="return false">
+                <label for="titulo">TITULO:</label>
+                <input type="text" id="titulo" name="titulo" value="1">
+                <label for="subtitulo">SUBTITULO:</label>
+                <input type="text" id="subtitulo" name="subtitulo" value="1">
+                <label for="texto">TEXTO:</label>
+                <input type="text" id="texto" name="texto" value="1">
+                <label for="autor">AUTOR:</label>
+                <input type="text" id="autor" name="autor" value="1">
+                <input type="submit" value="Añadir" onclick="noticias.anadirNoticia()">
+            </form>
+        </section>
+        <script src="Escritorio%20Virtual%20-%20Noticias_files/noticias.js"></script>
+
+</body></html>

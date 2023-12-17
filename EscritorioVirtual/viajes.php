@@ -138,35 +138,24 @@
     </section>
     <section>
         <h2>Rutas</h2>
-        <label for="archivoTexto">Fichero de rutas:</label>
-        <input type="file" id="archivoTexto" onchange="viajes.cargarRutaXML(this.files);"/>
+        <label for="rutas">Fichero de rutas:</label>
+        <input type="file" id="rutas" name="rutas" onchange="viajes.cargarRutaXML(this.files);"/>
     </section>
     <section>
         <h2>Planimetrias</h2>
-        <label for="archivoTexto">Fichero de planimetrias:</label>
-        <input multiple type="file" id="archivoTexto" onchange="viajes.getPlanimetriaMapbox(this.files);"/>
+        <label for="planimetrias">Fichero de planimetrias:</label>
+        <input multiple type="file" id="planimetrias" name="planimetrias" onchange="viajes.getPlanimetriaMapbox(this.files);"/>
     </section>
     <section>
         <h2>Altimetrias</h2>
-        <label for="archivoTexto">Fichero de altimetrias:</label>
-        <input multiple type="file" id="archivoTexto" onchange="viajes.getAltimetrias(this.files);"/>
+        <label for="altimetrias">Fichero de altimetrias:</label>
+        <input multiple type="file" id="altimetrias" name="altimetrias" onchange="viajes.getAltimetrias(this.files);"/>
     </section>
     <section>
         <h2>Cambio de moneda</h2>
-        <form action='#' method='POST'>
-            <label for='cantidad'>Cantidad:</label>
-            <input type='number' id='cantidad' name='cantidad' value=""/>
-            <input type='submit' value='Convertir'/>
-        </form>
         <?php
             $moneda = new Moneda("RSD", "EUR");
-
-            if(count($_POST) > 0) {
-                $cantidad = $_POST["cantidad"];
-                echo "<p>Conversion: " . $moneda->convertirMoneda($cantidad) . " " . $moneda->siglasTo . "</p>";
-            } else {
-                echo "<p>Por favor introduce una cantidad</p>";
-            }
+            echo "<p>1 EUR son: " . $moneda->convertirMoneda(1) . " RSD.</p>";
         ?>
     </section>
     <?php

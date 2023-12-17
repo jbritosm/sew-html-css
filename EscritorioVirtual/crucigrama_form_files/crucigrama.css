@@ -1,0 +1,76 @@
+/* Joaquín Salustiano Britos Morales UO276044 */
+
+/* Especificidad (0, 0, 1) */
+main {
+    width: 50vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0;
+    margin: 5%;
+    margin-bottom: 0%;
+}
+
+/* Especificidad (0, 0, 1) */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Especificidad (0, 0, 1), (0, 0, 1) */
+body > header, body > section {
+    width: 100%;
+}
+
+/* Especificidad (0, 0, 1) */
+p {
+    width: 100%;
+    text-align: center;
+    padding: 10% 0%;
+    margin: 0%;
+    border: 0.1em solid black;
+    background-color: #FFF;
+}
+
+/* Especificidad (0, 1, 1) */
+p[data-state=empty] {
+    /* Hereda color #000000 de body */
+    background-color: #000;
+}
+
+/* Estilos para una mediaquery
+que muestre la botonera en tablet y móvil */
+/* Especificidad (0, 1, 1) */
+section[data-type=botonera] {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Solo se muestra en pruebas en dispositivos moviles */
+    visibility: hidden;
+}
+/* Especificidad (0, 1, 2) */
+section[data-type=botonera] h2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Especificidad (0, 1, 2) */
+section[data-type=botonera] button {
+    width: calc(15% - 1em);
+    height: 4em;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Especificidad (0, 0, 1) */
+form {
+    background-color: #868B8E;
+    display: flex;
+    flex-direction: column;
+    border: #000 solid;
+    margin: 1%;
+}
