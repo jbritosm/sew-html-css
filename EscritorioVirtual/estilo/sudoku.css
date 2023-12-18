@@ -30,4 +30,5 @@ p {
     margin: 0;
     text-align: center;
     border: 1px solid black;
+    /* Hereda color #000000 de body */
 }

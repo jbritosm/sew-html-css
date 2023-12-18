@@ -3,4 +3,6 @@
 /* Especificidad: (0, 0, 1), (0, 0, 1)*/
 ul, li {
     background-color: white;
+    /* Hereda color #00000 de body */
+    /* Hereda color #00000 de body */
 }

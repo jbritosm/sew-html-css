@@ -6,6 +6,9 @@ body > section:nth-child(3), body > section > section {
     height: 20vh;
 }
 
+/* Especificidad: (0, 0, 1) */
 section {
     background-color: silver;
+    /* Hereda color #00000 de body */
+
 }

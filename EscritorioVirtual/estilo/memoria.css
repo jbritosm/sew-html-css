@@ -54,4 +54,6 @@ section:last-of-type article[data-state="flip"], section:last-of-type article[da
 /* Especificidad (0, 0, 1) */
 section:last-of-type {
     background-color: #EEEDE7;
+    /* Hereda color #000000 de body */
+
 }

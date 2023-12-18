@@ -76,16 +76,17 @@
             <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
             <a href="viajes.php" accesskey="V" tabindex="6">Viajes</a>
             <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
-            <a href="api.html" accesskey="P" tabindex="8">Aplicacion</a>
         </nav>
     </header>
     <section>
         <h2>Menú</h2>
-        <a href="memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
-        <a href="sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
-        <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
-        <a href="api.html" accesskey="P" tabindex="11">Aplicacion</a>
-        <a href="php/biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
+        <nav>
+            <a href="memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
+            <a href="sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
+            <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
+            <a href="api.html" accesskey="P" tabindex="11">Aplicacion</a>
+            <a href="php/biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
+        <nav>
     </section>
     <main></main>  
     <?php

@@ -3,8 +3,9 @@
 /* Especificidad: (0, 0, 1) */
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-content: center;
 }
 
 @media (max-width: 900px) {

@@ -30,44 +30,46 @@ article h3 {
   
 /* Especificidad (0, 0, 2) */
 article img {
-width: 100%;
-max-width: 100vh;
-height: 60vh;
-position: absolute;
-transition: all 0.5s;
-object-fit: cover;
-border-radius: 0.5em;
+    width: 100%;
+    max-width: 100vh;
+    height: 60vh;
+    position: absolute;
+    transition: all 0.5s;
+    object-fit: cover;
+    border-radius: 0.5em;
 }
 
 /* Especificidad (0, 0, 2) */
 article > button {
-position: absolute;
-width: 2em;
-height: 2em;
-padding: 0.5em;
-border: none;
-border-radius: 50%;
-z-index: 10;
-cursor: pointer;
-background-color: #fff;
-font-size: 1em;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 1em;
+    /* Hereda color #000000 de body */
+
 }
 
 /* Especificidad (0, 1, 2) */
 article > button:active {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /* Especificidad (0, 1, 2) */
 article > button[data-action=prev] {
-top: 50%;
-left: 2%;
+    top: 50%;
+    left: 2%;
 }
 
 /* Especificidad (0, 1, 2) */
 article > button[data-action=next] {
-top: 50%;
-right: 2%;
+    top: 50%;
+    right: 2%;
 }
 
 

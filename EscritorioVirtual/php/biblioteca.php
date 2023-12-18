@@ -110,7 +110,7 @@
         function exportarCSV() {
             $this->existeBD();
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
-            $fileName = "biblioteca_exportada.csv";
+            $fileName = "biblioteca.csv";
             $file = fopen($fileName, "w");
 
             $result = $conn->query("SHOW TABLES");
@@ -325,12 +325,14 @@
         </nav>
     </header> 
     <section>
-            <h2>Menú</h2>
+        <h2>Menú</h2>
+        <nav>
             <a href="../memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
             <a href="../sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
             <a href="../crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
             <a href="../api.html" accesskey="P" tabindex="11">Aplicacion</a>
-            <a href="../biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
+            <a href="biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
+        </nav>
     </section>       
     <main>                
         <h2>Biblioteca</h2>
