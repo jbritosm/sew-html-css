@@ -107,6 +107,15 @@
            
         }
 
+        function borrarBD() {
+            $this->existeBD();
+            $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
+            $conn->query("DROP DATABASE biblioteca;");
+            $conn->close();
+
+            echo "<p>Base de datos borrada con exito.</p>";
+        }
+
         function exportarCSV() {
             $this->existeBD();
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
@@ -320,7 +329,7 @@
             <a href="../noticias.html" accesskey="N" tabindex="3">Noticias</a>
             <a href="../agenda.html" accesskey="A" tabindex="4">Agenda</a>
             <a href="../metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
-            <a href="../viajes.php" accesskey="V" tabindex="6">Viajes</a>
+            <a href="viajes.php" accesskey="V" tabindex="6">Viajes</a>
             <a href="../juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
     </header> 
@@ -329,7 +338,7 @@
         <nav>
             <a href="../memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
             <a href="../sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
-            <a href="../crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
+            <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
             <a href="../api.html" accesskey="P" tabindex="11">Aplicacion</a>
             <a href="biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
         </nav>
@@ -342,12 +351,14 @@
                 <input type="submit" value="Crear base de datos" name="crear" />
                 <input type="submit" value="Cargar archivos" name="cargar" />
                 <input type="submit" value="Exportar" name="exportar" />
+                <input type="submit" value="Borrar base de datos" name="borrar" />
             </form>
             <?php
                 if(count($_POST) > 0) {
                     if(isset($_POST["crear"])) $biblioteca->createTables();
                     if(isset($_POST["cargar"])) $biblioteca->insertFromCSV();
                     if(isset($_POST["exportar"])) $biblioteca->exportarCSV();
+                    if(isset($_POST["borrar"])) $biblioteca->borrarBD();
                 }
             ?>
         </section>   

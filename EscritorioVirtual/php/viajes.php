@@ -102,14 +102,14 @@
     <meta name ="description" content ="Página de viajes nuestro escritorio virtual." />
     <meta name ="keywords" content ="desarrollo" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet " type="text/css" href="estilo/layout.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/viajes.css" />
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
+    <link rel="stylesheet " type="text/css" href="../estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../estilo/viajes.css" />
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
-    <link rel="icon" href="multimedia/imagenes/favicon.png"/>
+    <link rel="icon" href="../multimedia/imagenes/favicon.png"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-    <script src="js/viajes.js" defer></script>
+    <script src="../js/viajes.js" defer></script>
 </head>
 
 <body>
@@ -117,14 +117,13 @@
         <!-- Datos con el contenidos que aparece en el navegador -->
         <h1>Escritorio Virtual</h1>
         <nav>
-            <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
-            <a href="sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
-            <a href="noticias.html" accesskey="N" tabindex="3">Noticias</a>
-            <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
-            <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
+            <a href="../index.html" accesskey="I" tabindex="1">Inicio</a>
+            <a href="../sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+            <a href="../noticias.html" accesskey="N" tabindex="3">Noticias</a>
+            <a href="../agenda.html" accesskey="A" tabindex="4">Agenda</a>
+            <a href="../metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
             <a href="viajes.php" accesskey="V" tabindex="6">Viajes</a>
-            <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
-            <a href="api.html" accesskey="P" tabindex="8">Aplicacion</a>
+            <a href="../juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
     </header>
     <section>

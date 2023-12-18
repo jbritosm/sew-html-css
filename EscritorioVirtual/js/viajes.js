@@ -109,7 +109,7 @@ class Viajes {
 
                 for(let k = 0; k < fotos.length; k++) {
                     let foto = fotos[k]
-                    fotosPath.push(`multimedia/imagenes/${foto.getAttribute("path")}`)
+                    fotosPath.push(`../multimedia/imagenes/${foto.getAttribute("path")}`)
                 }
 
                 infoHitos.push({

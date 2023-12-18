@@ -55,13 +55,13 @@
     <meta name="description" content="Juego de crucigrama matematico" />
     <meta name="keywords" content="crucigrama, matematico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/crucigrama.css" />
-    <link rel="icon" href="multimedia/imagenes/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../estilo/crucigrama.css" />
+    <link rel="icon" href="../multimedia/imagenes/favicon.png" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="js/crucigrama.js"></script>
+    <script src="../js/crucigrama.js"></script>
 </head>
 
 <body>
@@ -69,23 +69,23 @@
         <!-- Datos con el contenidos que aparece en el navegador -->
         <h1>Escritorio Virtual</h1>
         <nav>
-            <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
-            <a href="sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
-            <a href="noticias.html" accesskey="N" tabindex="3">Noticias</a>
-            <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
-            <a href="metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
+            <a href="../index.html" accesskey="I" tabindex="1">Inicio</a>
+            <a href="../sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+            <a href="../noticias.html" accesskey="N" tabindex="3">Noticias</a>
+            <a href="../agenda.html" accesskey="A" tabindex="4">Agenda</a>
+            <a href="../metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
             <a href="viajes.php" accesskey="V" tabindex="6">Viajes</a>
-            <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+            <a href="../juegos.html" accesskey="J" tabindex="7">Juegos</a>
         </nav>
     </header>
     <section>
         <h2>Menú</h2>
         <nav>
-            <a href="memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
-            <a href="sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
+            <a href="../memoria.html" accesskey="E" tabindex="8">Juego de memoria</a>
+            <a href="../sudoku.html" accesskey="K" tabindex="9">Sudoku</a>
             <a href="crucigrama.php" accesskey="C" tabindex="10">Crucigrama matematico</a>
-            <a href="api.html" accesskey="P" tabindex="11">Aplicacion</a>
-            <a href="php/biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
+            <a href="../api.html" accesskey="P" tabindex="11">Aplicacion</a>
+            <a href="biblioteca.php" accesskey="B" tabindex="12">Biblioteca</a>
         <nav>
     </section>
     <main></main>  

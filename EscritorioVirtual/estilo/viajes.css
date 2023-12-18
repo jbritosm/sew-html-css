@@ -72,4 +72,9 @@ article > button[data-action=next] {
     right: 2%;
 }
 
+/* Especificidad (0, 0, 1) */
+img {
+    width: 50%;
+    height: auto;
+}
 
