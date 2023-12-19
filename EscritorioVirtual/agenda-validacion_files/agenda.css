@@ -1,0 +1,19 @@
+/* Joaquín Salustiano Britos Morales UO276044 */
+
+/* Especificidad: (0, 0, 1)*/
+li {
+    color: black;
+    background-color: #f0f8ff;
+}
+
+/* Especificidad: (0, 0, 1) */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Especificidad: (0, 0, 1) */
+main > section {
+    width: 49%;
+    border: 0.2em solid #ffffff;
+}
