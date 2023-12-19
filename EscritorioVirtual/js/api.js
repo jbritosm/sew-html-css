@@ -77,14 +77,14 @@ class API {
     toggleFullscreen() {
         let elem = document.querySelector("body > section:nth-last-of-type(1) > section");
         if(elem === null) {
-            alert("Por favor dropea un archivo html en la zona designada.")
+            alert("Por favor arrastra y suelta un archivo KML en la zona designada.")
             return
         }
 
         if (!document.fullscreenElement) {
           elem.requestFullscreen().catch((err) => {
             alert(
-              `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+              `Error al entrar en modo pantalla completa: ${err.message} (${err.name})`,
             );
           });
         } else {

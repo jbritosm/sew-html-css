@@ -55,55 +55,54 @@
 
         public function insertFromCSV() {
             $this->existeBD();
-            $fileHandle = fopen($this->datos, 'r');
-
-            $tableNames = array("autor_id", "editorial_id", "genero_id", "libro_idtitulo_libro", "libro_idautor_id");
-            
-            $rowType = "";
-
-            if ($fileHandle !== false) {
-                while (($row = fgetcsv($fileHandle)) !== false) {
-                    $first = $row[0];
-                    switch($first) {
-                        case "autor_id":      
-                            $rowType = "autor";                                                          
-                            continue 2;
-                        case "editorial_id":
-                            $rowType = "editorial";
-                            continue 2;
-                        case "genero_id":
-                            $rowType = "genero";
-                            continue 2;
-                        case "libro_id":
-                            if($row[1] === "autor_id") {
-                                $rowType = "libroautor";
-                            } else {
-                                $rowType = "libro";
-                            }                                
-                            continue 2;
-                        default:
-                            switch($rowType) {
-                                case "autor":
-                                    $this->insertAutor($row);
-                                    break;
-                                case "editorial":
-                                    $this->insertEditorial($row);
-                                    break;
-                                case "genero":
-                                    $this->insertGenero($row);
-                                    break 2;
-                                case "libro":
-                                    $this->insertLibro($row);
-                                    break 2;
-                                case "libroautor":
-                                    $this->insertLibroAutor($row);
-                                    break 2;
-                            }
+            if($_FILES && $_FILES["cargar"]["type"] === "text/csv") {
+                $rowType = "";
+                if (($handle = fopen($_FILES["cargar"]["tmp_name"], "r")) !== false) {
+                    while (($row = fgetcsv($handle)) !== false) {
+                        $first = $row[0];
+                        switch($first) {
+                            case "autor_id":      
+                                $rowType = "autor";                                     
+                                continue 2;
+                            case "editorial_id":
+                                $rowType = "editorial";
+                                continue 2;
+                            case "genero_id":
+                                $rowType = "genero";
+                                continue 2;
+                            case "libro_id":
+                                if($row[1] === "autor_id") {
+                                    $rowType = "libroautor";
+                                } else {
+                                    $rowType = "libro";
+                                }                                
+                                continue 2;
+                            default:
+                                switch($rowType) {
+                                    case "autor":
+                                        $this->insertAutor($row);
+                                        break;
+                                    case "editorial":
+                                        $this->insertEditorial($row);
+                                        break;
+                                    case "genero":
+                                        $this->insertGenero($row);
+                                        break 2;
+                                    case "libro":
+                                        $this->insertLibro($row);
+                                        break 2;
+                                    case "libroautor":
+                                        $this->insertLibroAutor($row);
+                                        break 2;
+                                }
+                        }
                     }
+                    
+                    echo "<p>Datos cargados correctamente</p>";
                 }
-                
-                echo "<p>Datos cargados correctamente</p>";
-            }   
+            } else {
+                echo "<p>Ha ocurrido un error al importar los datos.</p>";
+            }
            
         }
 
@@ -118,26 +117,26 @@
 
         function exportarCSV() {
             $this->existeBD();
-            $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
+            $conn = new mysqli("localhost", "DBUSER2023", "DBPSWD2023", "biblioteca");
             $fileName = "biblioteca.csv";
             $file = fopen($fileName, "w");
-
+            
             $result = $conn->query("SHOW TABLES");
-
+            
             while($row = $result->fetch_row()) {
                 $table = $row[0];                
-
-                $colResult = $conn->query("SHOW COLUMNS FROM $table");
+            
+                $colResult = $conn->query("SHOW COLUMNS FROM $table;");
                 $names = array();
-
+            
                 while($colRow = $colResult->fetch_assoc()) {
                     $names[] = $colRow["Field"];
                 }
-
+            
                 fputcsv($file, $names);
                 
                 $dataResult = $conn->query("SELECT * FROM $table");
-
+            
                 while($dataRow = $dataResult->fetch_assoc()) {
                     fputcsv($file, $dataRow);
                 }
@@ -145,6 +144,12 @@
             
             fclose($file);
             $conn->close(); 
+            
+            header('Content-Type: text/csv');
+            header('Content-Disposition: attachment; filename="' . $fileName . '"');
+            
+            readfile($fileName);
+            exit;
         }
         
 
@@ -161,11 +166,15 @@
 
         public function insertAutor($data) {
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
-            $stmt = $conn->prepare("INSERT INTO Autor
-                                  VALUES (?, ?);");
 
-            $stmt->bind_param('is', $data[0], $data[1]);
-            
+            try {
+                $stmt = $conn->prepare("INSERT INTO autor
+                                    VALUES (?, ?);");
+
+                $stmt->bind_param('is', $data[0], $data[1]);
+            } catch(Exception $e) {
+                die($e->getMessage());
+            }
             $this->execute($stmt);          
 
             $conn->close();
@@ -173,7 +182,7 @@
 
         public function insertEditorial($data) {
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
-            $stmt = $conn->prepare("INSERT INTO Editorial
+            $stmt = $conn->prepare("INSERT INTO editorial
                                   VALUES (?, ?);");
 
             $stmt->bind_param('is', $data[0], $data[1]);
@@ -185,7 +194,7 @@
 
         public function insertGenero($data) {
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
-            $stmt = $conn->prepare("INSERT INTO Genero
+            $stmt = $conn->prepare("INSERT INTO genero
                                   VALUES (?, ?);");
 
             $stmt->bind_param('is', $data[0], $data[1]);
@@ -196,7 +205,7 @@
 
         public function insertLibro($data) {
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
-            $stmt = $conn->prepare("INSERT INTO Libro
+            $stmt = $conn->prepare("INSERT INTO libro
                                   VALUES (?, ?, ?, ?, ?);");
 
             $stmt->bind_param('isiii', $data[0], $data[1], $data[2], $data[3], $data[4]);
@@ -207,7 +216,7 @@
 
         public function insertLibroAutor($data) {
             $conn = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
-            $stmt = $conn->prepare("INSERT INTO Libro_autor
+            $stmt = $conn->prepare("INSERT INTO libro_autor
                                   VALUES (?, ?);");
 
             $stmt->bind_param('ii', $data[0], $data[1]);
@@ -225,7 +234,7 @@
                     WHERE l.libro_id = la.libro_id
                     AND la.autor_id = a.autor_id
                     AND l.editorial_id = e.editorial_id
-                    AND l.genero_id = g.genero_id";
+                    AND l.genero_id = g.genero_id;";
                     
             $result = $conn->query($sql);
 
@@ -347,17 +356,20 @@
         <h2>Biblioteca</h2>
         <section>
             <h3>Control de datos</h3>
-            <form action='#' method='POST'>
+            <form action='#' method='POST' enctype='multipart/form-data'>
                 <input type="submit" value="Crear base de datos" name="crear" />
-                <input type="submit" value="Cargar archivos" name="cargar" />
-                <input type="submit" value="Exportar" name="exportar" />
+                <label for="cargar">Cargar archivos:</label>
+                <input type="file" id="cargar" name="cargar"/>   
+                <input type="submit" value="Cargar" name="cargaDeArchivo" />                
                 <input type="submit" value="Borrar base de datos" name="borrar" />
+            </form>
+            <form action="descarga.php">
+                <input type="submit" value="Exportar" />
             </form>
             <?php
                 if(count($_POST) > 0) {
                     if(isset($_POST["crear"])) $biblioteca->createTables();
-                    if(isset($_POST["cargar"])) $biblioteca->insertFromCSV();
-                    if(isset($_POST["exportar"])) $biblioteca->exportarCSV();
+                    if(isset($_POST["cargaDeArchivo"])) $biblioteca->insertFromCSV();
                     if(isset($_POST["borrar"])) $biblioteca->borrarBD();
                 }
             ?>
