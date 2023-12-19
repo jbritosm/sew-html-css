@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://localhost/sew-html-css/EscritorioVirtual/php/viajes.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Datos que describen el documento -->
+    
+    <title>EscritorioVirtual - Viajes</title>
+    <meta name="author" content="Joaquín Salustiano Britos Morales">
+    <meta name="description" content="Página de viajes nuestro escritorio virtual.">
+    <meta name="keywords" content="desarrollo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./viajes-validacion_files/estilo.css">
+    <link rel="stylesheet " type="text/css" href="./viajes-validacion_files/layout.css">
+    <link rel="stylesheet" type="text/css" href="./viajes-validacion_files/viajes.css">
+    <link href="./viajes-validacion_files/mapbox-gl.css" rel="stylesheet">
+    <link rel="icon" href="http://localhost/sew-html-css/EscritorioVirtual/multimedia/imagenes/favicon.png">
+    <script src="./viajes-validacion_files/jquery-3.7.1.min.js.descarga" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <script src="./viajes-validacion_files/mapbox-gl.js.descarga"></script>
+    <script src="./viajes-validacion_files/viajes.js.descarga" defer=""></script>
+<script src="chrome-extension://nngceckbapebfimnlniiiahkandclblb/content/fido2/page-script.js"></script><style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com/"><link rel="stylesheet" href="./viajes-validacion_files/css2"></head>
+
+<body>
+    <header>
+        <!-- Datos con el contenidos que aparece en el navegador -->
+        <h1>Escritorio Virtual</h1>
+        <nav>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/index.html" accesskey="I" tabindex="1">Inicio</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/noticias.html" accesskey="N" tabindex="3">Noticias</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/agenda.html" accesskey="A" tabindex="4">Agenda</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/metereologia.html" accesskey="M" tabindex="5">Metereologia</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/php/viajes.php" accesskey="V" tabindex="6">Viajes</a>
+            <a href="http://localhost/sew-html-css/EscritorioVirtual/juegos.html" accesskey="J" tabindex="7">Juegos</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Mapa estatico</h2>
+        <button onclick="viajes.getMapaEstaticoMapbox()">Mostrar mapa estatico</button>
+    </section>
+    <section>
+        <h2>Mapa dinamico</h2>
+        <button onclick="viajes.getMapaDinamicoMapbox(&#39;map&#39;)">Mostrar mapa dinamico</button>
+        <section id="map"></section>
+    </section>
+    <section>
+        <h2>Rutas</h2>
+        <label for="rutas">Fichero de rutas:</label>
+        <input type="file" id="rutas" name="rutas" onchange="viajes.cargarRutaXML(this.files);">
+    </section>
+    <section>
+        <h2>Planimetrias</h2>
+        <label for="planimetrias">Fichero de planimetrias:</label>
+        <input multiple="" type="file" id="planimetrias" name="planimetrias" onchange="viajes.getPlanimetriaMapbox(this.files);">
+    </section>
+    <section>
+        <h2>Altimetrias</h2>
+        <label for="altimetrias">Fichero de altimetrias:</label>
+        <input multiple="" type="file" id="altimetrias" name="altimetrias" onchange="viajes.getAltimetrias(this.files);">
+    </section>
+    <section>
+        <h2>Cambio de moneda</h2>
+        <p>1 EUR son: 0.0085308786552758 RSD.</p>    </section>
+    	<article>
+		<h2>Carrusel de imagenes</h2>
+<img src="./viajes-validacion_files/53403267045_fe42a5a3db_m.jpg" alt="2018-04-26, Beograd, Beko"><img src="./viajes-validacion_files/53401894932_5fef12bb2a_m.jpg" alt="2018-04-26, Beograd, Trg. Nikole Pasica (Glavna Posta)"><img src="./viajes-validacion_files/53401762436_128ef73bb2_m.jpg" alt="2018-04-26, Beograd, Nemanjina"><img src="./viajes-validacion_files/53401527626_675d8b926a_m.jpg" alt="2018-04-26, Beograd, RK Beograđanka (Resavska)"><img src="./viajes-validacion_files/53393063922_255fcc61c1_m.jpg" alt="P1003439"><img src="./viajes-validacion_files/53393063912_73559baf12_m.jpg" alt="P1003432"><img src="./viajes-validacion_files/53388184890_ca1967e9a8_m.jpg" alt="P1003495"><img src="./viajes-validacion_files/53388167250_7b5c40842d_m.jpg" alt="Trg Republike, opština Stari grad, Beograd. Decembar 2023 godine. Coca Cola truck."><img src="./viajes-validacion_files/53388038319_2a0f35fb00_m.jpg" alt="Trg Republike, opština Stari grad, Beograd. Decembar 2023 godine. Coca Cola truck."><img src="./viajes-validacion_files/53388166935_4c6b8f7e99_m.jpg" alt="Trg Republike, opština Stari grad, Beograd. Decembar 2023 godine. Coca Cola truck.">	<button onclick="viajes.nextSlide()" data-action="next"> &gt; </button>
+	<button onclick="viajes.prevSlide()" data-action="prev"> &lt; </button>
+	</article>
+    
+    
+
+</body></html>
