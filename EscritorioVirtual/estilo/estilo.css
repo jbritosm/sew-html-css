@@ -60,7 +60,7 @@ a {
 /* Especificidad: (0, 1, 1) */
 a:hover {
     /* Hereda background color #B9B7BD de a */
-    color: #7fffd4;
+    color: #0d1412;
 }
 
 /* Especificidad: (0, 0, 1) */
