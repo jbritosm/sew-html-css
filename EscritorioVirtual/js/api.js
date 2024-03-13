@@ -1,6 +1,6 @@
 class API {
     constructor() {
-        this.apiKey = "pk.eyJ1IjoiamJyaXRvc20iLCJhIjoiY2xwamowcWh1MDBrcjJqbGJocTQ0NDBycSJ9.fIpnrp47Ldja1ZKWBFax-Q";        
+        this.apiKey = "";        
         mapboxgl.accessToken = this.apiKey
         this.addFullscreenListener()
     }

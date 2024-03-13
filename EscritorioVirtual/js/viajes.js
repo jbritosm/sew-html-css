@@ -1,6 +1,6 @@
 class Viajes {
     constructor (){
-        this.apiKey = "pk.eyJ1IjoiamJyaXRvc20iLCJhIjoiY2xwamowcWh1MDBrcjJqbGJocTQ0NDBycSJ9.fIpnrp47Ldja1ZKWBFax-Q";    
+        this.apiKey = "";    
         navigator.geolocation.getCurrentPosition(this.getPosicion.bind(this), this.verErrores.bind(this));
     
         mapboxgl.accessToken = this.apiKey

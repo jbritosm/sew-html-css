@@ -7,7 +7,7 @@ class Fondo {
 
     query() {        
         $.getJSON("https://www.flickr.com/services/rest/?method=flickr.photos.search&nojsoncallback=1", {
-            api_key: "dc7f40bc454df978bd1ac3fafb0095d8",
+            api_key: "",
             lat: this.coordenadasCapital["latitud"],
             lon: this.coordenadasCapital["longitud"],
             format: "json",

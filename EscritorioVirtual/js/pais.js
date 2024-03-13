@@ -55,7 +55,7 @@ class Pais {
     }
 
     query() {
-        let api_key = "d84f666e1708d46677ae7b37e7ad8e73";
+        let api_key = "";
         let units = "metric"
         let lat = this.coordenadasCapital["latitud"]
         let lon = this.coordenadasCapital["longitud"]
